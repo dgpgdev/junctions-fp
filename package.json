@@ -1,0 +1,22 @@
+{
+  "name": "junctions",
+  "version": "1.0.0",
+  "description": "js functionnal programmin library",
+  "main": "index.js",
+  "author": "Gauthier de Girodon Pralong",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-register -w"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.8.0",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.3"
+  }
+}
