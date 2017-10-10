@@ -1,24 +1,9 @@
 import chai from 'chai'
-import {
-    pluck,
-    map,
-    filter,
-    flatMap,
-    flatFilter,
-    all
-} from '../src/junctions/List'
+import * as J from '../lib/index'
 
 import {
-    equal,
-    gt
-} from '../src/junctions/Relation'
-
-import {
-    pipe,
-    get,
-    modify
-} from '../src/junctions/Functions'
-
+    add
+} from '../src/junctions/Math'
 
 const assert = chai.assert
 
@@ -35,12 +20,12 @@ describe("List test", function () {
     }]
 
     it('Pluck score of array', () => {
-        let pa = pluck('score')
+        let pa = J.pluck('score')
         assert.isArray(pa(ta), 'pluck return an array')
         assert.deepEqual(pa(ta), [1, 2, 3], 'pluck return an array')
     })
     it('pipe gt score of 1', () => {
-        let pa = pipe(pluck('score'), filter(gt(1)))
+        let pa = J.pipe(J.pluck('score'), J.filter(J.gt(1)))
         assert.isArray(pa(ta), 'pluck return an array')
         assert.deepEqual(pa(ta), [2, 3], 'pluck return an array')
     })
@@ -51,7 +36,7 @@ describe("List test", function () {
             [5, [6, 7]]
         ]
         let mapper = x => x + 1
-        assert.deepEqual(flatMap(a, mapper), [2, 3, 4, 5, 6, 7, 8])
+        assert.deepEqual(J.flatMap(a, mapper), [2, 3, 4, 5, 6, 7, 8])
     })
 
     it('advance flat map ', () => {
@@ -70,8 +55,8 @@ describe("List test", function () {
                 "thumbnailUrl": "http://placehold.it/150/771796"
             }
         ]
-        let mapper = pipe(modify('title', 'youpi'), modify('url', 'myurl'))
-        assert.deepEqual(flatMap(a, mapper), [{
+        let mapper = J.pipe(J.modify('title', 'youpi'), J.modify('url', 'myurl'))
+        assert.deepEqual(J.flatMap(a, mapper), [{
                 "albumId": 1,
                 "id": 1,
                 "title": "youpi",
@@ -96,7 +81,7 @@ describe("List test", function () {
             [5, [6, 7]]
         ]
         let filt = x => x > 3
-        assert.deepEqual(flatFilter(a, filt), [4, 5, 6, 7])
+        assert.deepEqual(J.flatFilter(a, filt), [4, 5, 6, 7])
     })
     it('advanced flat filter ', () => {
         let a = [{
@@ -163,8 +148,8 @@ describe("List test", function () {
                 "thumbnailUrl": "http://placehold.it/150/51aa97"
             }
         ]
-        let filt = pipe(get('id'), equal(8))
-        assert.deepEqual(flatFilter(a, filt), [{
+        let filt = J.pipe(J.get('id'), J.equal(8))
+        assert.deepEqual(J.flatFilter(a, filt), [{
             albumId: 1,
             id: 8,
             title: 'aut porro officiis laborum odit ea laudantium corporis',
@@ -175,10 +160,9 @@ describe("List test", function () {
 
 
     it('test valid all values ', () => {
-        let equals3 = equal(3)
-        assert.isTrue(all(equals3)([3, 3, 3, 3]))
-        assert.isFalse(all(equals3)([3, 3, 1, 3]))
+        let equals3 = J.equal(3)
+        assert.isTrue(J.all(equals3)([3, 3, 3, 3]))
+        assert.isFalse(J.all(equals3)([3, 3, 1, 3]))
     })
-
 
 })

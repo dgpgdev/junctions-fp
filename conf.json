@@ -1,0 +1,19 @@
+{
+	"templates": {
+		"systemName": "Junctions",
+		"footer": "my footer",
+		"copyright": "Gauthier de Girodon Pralong",
+		"includeDate": "true",
+		"navType": "vertical",
+		"theme": "flatly",
+		"linenums": "true",
+		"collapseSymbols": "true",
+		"inverseNav": "true",
+		"outputSourceFiles": "true",
+		"outputSourcePath": "true",
+		"dateFormat": "{string}",
+		"syntaxTheme": "{string}",
+		"sort": "true",
+		"search": "true"
+	}
+}

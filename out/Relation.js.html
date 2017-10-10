@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Relation.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Relation.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Base type detection
+ * @param {*} type 
+ */
+const is = type => value => (type === 'array') ? Array.isArray(value) : typeof value === type
+///////////////////////////////////
+// STRING
+///////////////////////////////////
+/**
+ * check if value is a string
+ * 
+ * @param {any} value 
+ * @returns 
+ */
+const isString = () => value => is('string')(value)
+
+/**
+ * check if value is not defined or empty
+ * 
+ * @param {any} value 
+ * @returns 
+ */
+const notDefined = () => value => value === undefined || value === null || value === ''
+
+/**
+ * check if value is defined or not empty
+ * 
+ * @param {any} value 
+ * @returns 
+ */
+const defined = () => value => !isEmpty(value)
+
+
+///////////////////////////////////
+// Number
+///////////////////////////////////
+/**
+ * check if value is a number
+ * 
+ * @param {any} value 
+ * @returns 
+ */
+const isNumber = () => value => is('number')(value) &amp;&amp; !Number.isNaN(value)
+
+
+/**
+ * check if value is an Integer
+ * 
+ * @param {any} value 
+ * @returns 
+ */
+const isInt = () => value => Number.isInteger(value)
+
+/**
+ * check if value is gt than number
+ * 
+ * @param {any} value 
+ * @param {any} number 
+ * @returns 
+ */
+let gt = limit => value => isString()(value) ? value.trim().length > limit : value > limit
+
+let gte = limit => value => isString()(value) ? value.trim().length >= limit : value >= limit
+
+/**
+ * check if value is lower than
+ * 
+ * @param {any} value 
+ * @param {any} number 
+ * @returns 
+ */
+let lt = limit => value => isString()(value) ? value.trim().length &lt; limit : value &lt; limit
+
+let lte = limit => value => isString()(value) ? value.trim().length &lt;= limit : value &lt;= limit
+
+/**
+ * compare equality between two data. If data is an Object, 
+ * iterate property and value for each object and compare 
+ * structure and data. If data is a primitive (number, boolean, string)
+ * use strict equality
+ * @param {*} x 
+ */
+const equal = (a) => (b) => {
+    const isObject = is('object')
+    const isValid = validConditions(isObject, defined)
+    if (isValid(a) &amp;&amp; isValid(b)) {
+        let count = [0, 0];
+        for (var key in a) count[0]++;
+        for (var key in b) count[1]++;
+        if (!equal(0)(count[0] - count[1])) {
+            return false
+        }
+        for (var key in a) {
+            if (!(key in b) || !equal(a[key])(b[key])) {
+                return false;
+            }
+        }
+        for (var key in b) {
+            if (!(key in a) || !equal(b[key])(a[key])) {
+                return false;
+            }
+        }
+        return true;
+    } else {
+        return a === b
+    }
+}
+
+/**
+ * test all conditions function and return true if all succeded
+ * @param {*} fns function list conditions
+ */
+const validConditions = (...fns) => data => fns.every(fn => fn(data))
+
+
+
+
+
+export {
+    is,
+    isString,
+    notDefined,
+    defined,
+    isInt,
+    isNumber,
+    gt,
+    gte,
+    lt,
+    lte,
+    validConditions,
+    equal
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#add">add</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#any">any</a></li><li><a href="global.html#arrayContain">arrayContain</a></li><li><a href="global.html#arrayIsEmpty">arrayIsEmpty</a></li><li><a href="global.html#arrayNotEmpty">arrayNotEmpty</a></li><li><a href="global.html#arraySize">arraySize</a></li><li><a href="global.html#compose">compose</a></li><li><a href="global.html#containDigit">containDigit</a></li><li><a href="global.html#curry">curry</a></li><li><a href="global.html#defined">defined</a></li><li><a href="global.html#diff">diff</a></li><li><a href="global.html#equal">equal</a></li><li><a href="global.html#excludeItemsInTwoArray">excludeItemsInTwoArray</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#firstIndex">firstIndex</a></li><li><a href="global.html#flatFilter">flatFilter</a></li><li><a href="global.html#flatMap">flatMap</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getItemsInTwoArray">getItemsInTwoArray</a></li><li><a href="global.html#getStringExtension">getStringExtension</a></li><li><a href="global.html#gt">gt</a></li><li><a href="global.html#has">has</a></li><li><a href="global.html#hasItemsInTwoArray">hasItemsInTwoArray</a></li><li><a href="global.html#is">is</a></li><li><a href="global.html#isInt">isInt</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#isValidUrl">isValidUrl</a></li><li><a href="global.html#lastIndex">lastIndex</a></li><li><a href="global.html#lt">lt</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#modify">modify</a></li><li><a href="global.html#moveToBegin">moveToBegin</a></li><li><a href="global.html#moveToEnd">moveToEnd</a></li><li><a href="global.html#multiply">multiply</a></li><li><a href="global.html#negate">negate</a></li><li><a href="global.html#notContainDigit">notContainDigit</a></li><li><a href="global.html#notDefined">notDefined</a></li><li><a href="global.html#pipe">pipe</a></li><li><a href="global.html#pluck">pluck</a></li><li><a href="global.html#reverse">reverse</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#swap">swap</a></li><li><a href="global.html#validConditions">validConditions</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Oct 08 2017 09:25:04 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

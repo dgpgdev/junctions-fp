@@ -1,11 +1,6 @@
 import {
     is
 } from './Relation'
-/**
- * delegate map array method
- * @param {*} fn 
- */
-const map = fn => array => array.map(fn)
 
 /**
  * compose multiple function
@@ -21,51 +16,9 @@ const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
  * ex : 
  *  const calc = compose(mult2, add2)
  *  calc(2) // result 6
- * @param {*} fns 
+ * @param {function} fns 
  */
 const pipe = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args)))
-
-
-
-/**
- * get property on object
- * @param {*} key 
- * @return {*} value
- */
-const get = key => item => item[key] != undefined ? item[key] : false
-
-/**
- * detect if item has property
- * @param {*} key string or int
- * @return {object} item
- */
-const has = key => item => item[key] != undefined ? item : false
-
-/**
- * 
- * @param {*} item 
- */
-const modify = (property, value) => item => {
-    item[property] = value
-    return item
-}
-
-/**
- * delegate filter
- * @param {*} fn 
- */
-const filter = fn => array => array.filter(fn)
-
-/**
- * delegate every
- * @param {*} fn 
- */
-const every = fn => array => array.every(fn)
-/**
- * delegate some
- * @param {*} fn 
- */
-const some = fn => array => array.some(fn)
 
 /**
  * negate result function
@@ -103,13 +56,6 @@ const curry = function (fn) {
 export {
     compose,
     pipe,
-    has,
-    get,
-    modify,
-    filter,
-    some,
-    every,
-    map,
     negate,
     curry
 }

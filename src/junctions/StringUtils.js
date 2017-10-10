@@ -1,6 +1,6 @@
 import {
     lastIndex
-} from './ArrayUtils'
+} from './List'
 
 ///////////////////////////////////
 // REGEX

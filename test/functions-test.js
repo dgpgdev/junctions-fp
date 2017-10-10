@@ -2,7 +2,7 @@ import chai from 'chai'
 import {
     pipe,
     curry
-} from '../src/junctions/Functions'
+} from '../src/junctions/Function'
 
 import {
     merge,
