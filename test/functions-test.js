@@ -1,7 +1,8 @@
 import chai from 'chai'
 import {
     pipe,
-    curry
+    curry,
+    debounce
 } from '../src/junctions/Function'
 
 import {
@@ -66,6 +67,20 @@ describe('functions test', function () {
 
     })
 
+    it('debounce call', function (done) {
+        this.timeout(15000)
+        const a = count => {
+            console.log(count)
+            assert.equal(count, 4)
+            done()
+        }
+        const d = debounce(a, 1000)
+        d(1)
+        d(2)
+        d(3)
+        d(4)
+
+    })
 
 
 })

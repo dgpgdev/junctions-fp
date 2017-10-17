@@ -22,7 +22,8 @@ import {
     compose,
     pipe,
     negate,
-    curry
+    curry,
+    debounce
 } from './junctions/Function'
 
 import {
@@ -60,7 +61,8 @@ import {
     isValidUrl,
     containDigit,
     notContainDigit,
-    trim
+    trim,
+    escapeRegExp
 } from './junctions/StringUtils'
 
 module.exports = {
@@ -87,6 +89,7 @@ module.exports = {
     pipe,
     negate,
     curry,
+    debounce,
     //Math
     multiply,
     add,
@@ -116,5 +119,6 @@ module.exports = {
     isValidUrl,
     containDigit,
     notContainDigit,
-    trim
+    trim,
+    escapeRegExp
 }

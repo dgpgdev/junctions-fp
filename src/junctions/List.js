@@ -8,7 +8,8 @@ import {
 } from './Relation'
 
 import {
-    get
+    get,
+    merge
 } from './Object'
 
 /** @module List  */
@@ -78,7 +79,7 @@ const getItemsInTwoArray = (a, b, compare) => a.filter(x => arrayNotEmpty(b.filt
  * @param {*} compare function to test
  * @return {array} 
  */
-const excludeItemsInTwoArray = (a, b, compare) => add(a)(b.filter(x => arrayIsEmpty(a.filter(y => compare(x)(y)))))
+const excludeItemsInTwoArray = (a, b, compare) => merge(a, b.filter(x => arrayIsEmpty(a.filter(y => compare(x)(y)))))
 
 /**
  * @memberof List
