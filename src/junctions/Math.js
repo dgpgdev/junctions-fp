@@ -5,6 +5,12 @@
 const multiply = x => y => x * y
 
 /**
+ * divide values
+ * @param {*} x 
+ */
+const divide = x => y => y / x
+
+/**
  * add Values, if values are a string, concat and return new String, 
  * if values are Numbers return result
  * @function
@@ -32,5 +38,6 @@ const diff = x => y => x - y
 export {
     multiply,
     add,
-    diff
+    diff,
+    divide
 }

@@ -6,6 +6,8 @@ import {
     hasItemsInTwoArray,
     getItemsInTwoArray,
     excludeItemsInTwoArray,
+    excludeDuplicate,
+    removeItem,
     lastIndex,
     firstIndex,
     moveToBegin,
@@ -29,7 +31,8 @@ import {
 import {
     multiply,
     add,
-    diff
+    diff,
+    divide
 } from './junctions/Math'
 
 import {
@@ -74,6 +77,8 @@ module.exports = {
     hasItemsInTwoArray,
     getItemsInTwoArray,
     excludeItemsInTwoArray,
+    excludeDuplicate,
+    removeItem,
     lastIndex,
     firstIndex,
     moveToBegin,
@@ -94,6 +99,7 @@ module.exports = {
     multiply,
     add,
     diff,
+    divide,
     //Object,
     has,
     get,

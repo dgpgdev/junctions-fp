@@ -1,5 +1,6 @@
 import {
-    compose
+    compose,
+    negate
 } from './Function'
 
 import {
@@ -80,6 +81,13 @@ const getItemsInTwoArray = (a, b, compare) => a.filter(x => arrayNotEmpty(b.filt
  * @return {array} 
  */
 const excludeItemsInTwoArray = (a, b, compare) => merge(a, b.filter(x => arrayIsEmpty(a.filter(y => compare(x)(y)))))
+
+/**
+ * exlude duplicate entries in an Array
+ * @param {array} array 
+ * @return {array} 
+ */
+const excludeDuplicate = array => array.filter((a, index, self) => self.findIndex((b) => equal(a)(b)) === index)
 
 /**
  * @memberof List
@@ -177,6 +185,9 @@ const flatFilter = (array, filt) => {
     return flatMap(array, x => x).filter(filt)
 }
 
+const removeItem = item => array => array.filter(i => {
+    return !equal(item)(i)
+})
 
 export {
     arraySize,
@@ -186,6 +197,8 @@ export {
     hasItemsInTwoArray,
     getItemsInTwoArray,
     excludeItemsInTwoArray,
+    excludeDuplicate,
+    removeItem,
     lastIndex,
     firstIndex,
     moveToBegin,

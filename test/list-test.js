@@ -165,4 +165,29 @@ describe("List test", function () {
         assert.isFalse(J.all(equals3)([3, 3, 1, 3]))
     })
 
+    it('test remove item', () => {
+        let a = [1, 2, 3, 4]
+        assert.deepEqual(J.removeItem(2)(a), [1, 3, 4])
+    })
+
+    it('test exclude duplicate object in an Single Array', () => {
+        let a = [{
+            value: 1,
+            name: 'a'
+        }, {
+            value: 1,
+            name: 'a'
+        }, {
+            value: 2,
+            name: 'b'
+        }]
+        assert.deepEqual(J.excludeDuplicate(a), [{
+            value: 1,
+            name: 'a'
+        }, {
+            value: 2,
+            name: 'b'
+        }])
+    })
+
 })
