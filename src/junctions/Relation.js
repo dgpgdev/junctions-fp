@@ -1,6 +1,3 @@
-import {
-    negate
-} from './Functions'
 /**
  * Base type detection
  * @param {*} type 
@@ -31,7 +28,7 @@ const notDefined = () => value => value === undefined || value === null || value
  * @param {any} value 
  * @returns 
  */
-const defined = () => value => negate(notDefined(value))
+const defined = () => value => value != undefined || value != null || value != ''
 
 
 ///////////////////////////////////
@@ -55,7 +52,7 @@ const isNumber = () => value => is('number')(value) && !Number.isNaN(value)
 const isInt = () => value => Number.isInteger(value)
 
 /**
- * check if value is gt than number
+ * check if value is greater than number
  * 
  * @param {any} value 
  * @param {any} number 
@@ -63,6 +60,13 @@ const isInt = () => value => Number.isInteger(value)
  */
 let gt = limit => value => isString()(value) ? value.trim().length > limit : value > limit
 
+/**
+ * check if value is greater or equal than number
+ * 
+ * @param {any} value 
+ * @param {any} number 
+ * @returns 
+ */
 let gte = limit => value => isString()(value) ? value.trim().length >= limit : value >= limit
 
 /**
@@ -74,6 +78,13 @@ let gte = limit => value => isString()(value) ? value.trim().length >= limit : v
  */
 let lt = limit => value => isString()(value) ? value.trim().length < limit : value < limit
 
+/**
+ * check if value is lower or equal than
+ * 
+ * @param {any} value 
+ * @param {any} number 
+ * @returns 
+ */
 let lte = limit => value => isString()(value) ? value.trim().length <= limit : value <= limit
 
 /**

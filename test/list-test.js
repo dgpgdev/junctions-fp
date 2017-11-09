@@ -190,4 +190,17 @@ describe("List test", function () {
         }])
     })
 
+    it('remove item by list prop', ()=>{
+        let a = [{ value: 1,name: 'a'}, 
+                { value: 2,name: 'b'},
+                { value: 3,name: 'c'}]
+
+        let b =[{name: 'a'}, 
+                {name: 'b'}]
+
+        let getItems = (arr1,arr2,prop) => arr1.filter(z=> !arr2.some(y =>J.get(prop)(y) ===J.get(prop)(z)))
+      //  assert.deepEqual(getItems(a,b,'name'), [{ value: 1,name: 'a'}, { value: 2,name: 'b'}])
+        assert.deepEqual(getItems(a,b,'name'), [{ value: 3,name: 'c'}])
+    })
+
 })
