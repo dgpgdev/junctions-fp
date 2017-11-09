@@ -1,3 +1,6 @@
+import {
+    negate
+} from './Functions'
 /**
  * Base type detection
  * @param {*} type 
@@ -28,7 +31,7 @@ const notDefined = () => value => value === undefined || value === null || value
  * @param {any} value 
  * @returns 
  */
-const defined = () => value => !isEmpty(value)
+const defined = () => value => negate(notDefined(value))
 
 
 ///////////////////////////////////
