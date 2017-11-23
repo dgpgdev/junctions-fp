@@ -2,17 +2,12 @@ import chai from 'chai'
 import {
     pipe,
     curry,
-    debounce
-} from '../src/junctions/Function'
-
-import {
+    debounce,
     merge,
-    mergeAll
-} from '../src/junctions/Object'
-import {
+    mergeAll,
     add
 
-} from '../src/junctions/Math'
+} from '../src/index'
 
 
 const assert = chai.assert
@@ -23,7 +18,6 @@ describe('functions test', function () {
         let o = curry(add);
         assert.equal(o(2)(3), 5, 'result curry')
     })
-
     it('merge', () => {
         let o = merge({
             a: 1

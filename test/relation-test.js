@@ -2,7 +2,7 @@ import chai from 'chai'
 import {
     defined,
     notDefined
-} from '../src/junctions/Relation'
+} from '../src/index'
 
 
 

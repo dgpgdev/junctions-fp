@@ -3,7 +3,7 @@ import * as J from '../lib/index'
 
 import {
     add
-} from '../src/junctions/Math'
+} from '../src/index'
 
 const assert = chai.assert
 
@@ -21,6 +21,7 @@ describe("List test", function () {
 
     it('Pluck score of array', () => {
         let pa = J.pluck('score')
+        console.log(pa(ta))
         assert.isArray(pa(ta), 'pluck return an array')
         assert.deepEqual(pa(ta), [1, 2, 3], 'pluck return an array')
     })
@@ -190,17 +191,35 @@ describe("List test", function () {
         }])
     })
 
-    it('remove item by list prop', ()=>{
-        let a = [{ value: 1,name: 'a'}, 
-                { value: 2,name: 'b'},
-                { value: 3,name: 'c'}]
+    it('remove item by list prop', () => {
+        let a = [{
+                value: 1,
+                name: 'a'
+            },
+            {
+                value: 2,
+                name: 'b'
+            },
+            {
+                value: 3,
+                name: 'c'
+            }
+        ]
 
-        let b =[{name: 'a'}, 
-                {name: 'b'}]
+        let b = [{
+                name: 'a'
+            },
+            {
+                name: 'b'
+            }
+        ]
 
-        let getItems = (arr1,arr2,prop) => arr1.filter(z=> !arr2.some(y =>J.get(prop)(y) ===J.get(prop)(z)))
-      //  assert.deepEqual(getItems(a,b,'name'), [{ value: 1,name: 'a'}, { value: 2,name: 'b'}])
-        assert.deepEqual(getItems(a,b,'name'), [{ value: 3,name: 'c'}])
+        let getItems = (arr1, arr2, prop) => arr1.filter(z => !arr2.some(y => J.get(prop)(y) === J.get(prop)(z)))
+        //  assert.deepEqual(getItems(a,b,'name'), [{ value: 1,name: 'a'}, { value: 2,name: 'b'}])
+        assert.deepEqual(getItems(a, b, 'name'), [{
+            value: 3,
+            name: 'c'
+        }])
     })
 
 })
