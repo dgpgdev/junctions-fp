@@ -58,7 +58,7 @@ typings/
 .env
 
 .gitignore
-.vscode
+.vscode/
 package-lock.json
 yarn.lock
-out
+out/
