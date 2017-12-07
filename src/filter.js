@@ -4,5 +4,5 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const filter = curry((fn, array) => array.map(fn))
+const filter = curry((fn, array) => array.filter(fn))
 export default filter

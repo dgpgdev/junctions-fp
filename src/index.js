@@ -1,15 +1,28 @@
-//FUNCTIONS
+/**
+ * base function
+ * @namespace Functions
+ */
 export { default as curry } from './curry'; 
 export { default as compose } from './compose'; 
 export { default as pipe } from './pipe'; 
 export { default as debounce } from './debounce'; 
-export { default as negate } from './negate'; 
-//MATH
+export { default as not } from './not'; 
+/**
+ * Math function
+ * @namespace Math
+ */
+export { default as increment } from './increment'; 
+export { default as decrement } from './decrement'; 
 export { default as add } from './add'; 
 export { default as multiply } from './multiply'; 
 export { default as divide } from './divide'; 
+export { default as modulo } from './modulo'; 
 export { default as substract } from './substract'; 
-//RELATION
+export { default as negate } from './negate'; 
+/**
+ * Relation function
+ * @namespace Relation
+ */
 export { default as is } from './is'; 
 export { default as isString } from './isString'; 
 export { default as isInt } from './isInt'; 
@@ -21,13 +34,20 @@ export { default as gt } from './gt';
 export { default as gte } from './gte'; 
 export { default as lt } from './lt'; 
 export { default as lte } from './lte'; 
-//OBJECT
+
+/**
+ * Object function
+ * @namespace Object
+ */
 export { default as has } from './has'; 
 export { default as get } from './get'; 
 export { default as modify } from './modify'; 
 export { default as merge } from './merge'; 
 export { default as mergeAll } from './mergeAll'; 
-//STRING
+/**
+ * String function
+ * @namespace String
+ */
 export { default as getStringExtension }from './getStringExtension'
 export { default as isValidEmail }from './isValidEmail'
 export { default as isValidUrl }from './isValidUrl'
@@ -35,20 +55,25 @@ export { default as containDigit }from './containDigit'
 export { default as notContainDigit }from './notContainDigit'
 export { default as trim }from './trim'
 export { default as escapeRegExp }from './escapeRegExp'
-//LIST
-export { default as arraySize } from './arraySize'; 
-export { default as arrayNotEmpty } from './arrayNotEmpty'
-export { default as arrayIsEmpty } from './arrayIsEmpty'
-export { default as arrayContain } from './arrayContain'
-export { default as hasItemsInTwoArray } from './hasItemsInTwoArray'
-export { default as getItemsInTwoArray } from './getItemsInTwoArray'
-export { default as excludeItemsInTwoArray } from './excludeItemsInTwoArray'
+/**
+ * List function
+ * @namespace List
+ */
+export { default as size } from './size'; 
+export { default as notEmpty } from './notEmpty'
+export { default as empty } from './empty'
+export { default as contain } from './contain'
+//export { default as hasItemsInTwoArray } from './hasItemsInTwoArray'
+export { default as hasDuplicate } from './hasDuplicate'
+export { default as getDuplicate } from './getDuplicate'
+//export { default as getItemsInTwoArray } from './getItemsInTwoArray'
+//export { default as excludeItemsInTwoArray } from './excludeItemsInTwoArray'
 export { default as excludeDuplicate } from './excludeDuplicate'
 export { default as removeItem } from './removeItem'
 export { default as lastIndex } from './lastIndex'
 export { default as firstIndex } from './firstIndex'
-export { default as moveToBegin } from './moveToBegin'
-export { default as moveToEnd } from './moveToEnd'
+export { default as setFirst } from './setFirst'
+export { default as setLast } from './setLast'
 export { default as map } from './map'
 export { default as filter } from './filter'
 export { default as pluck } from './pluck'

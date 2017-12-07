@@ -1,8 +1,10 @@
-import curry from './curry'
 /**
-* function negate
-* @func
-* @memberOf Junction
-*/
-const negate = curry((fn , ...args) => !fn.apply(null, args))
+ * negate the value
+ * @memberOf Math
+ * @func
+ * @param {number} x number to negate
+ * @returns {number} result
+ * @example {@lang javascript}const result = negate(4) //return -4
+ */
+const negate = x => -x
 export default negate

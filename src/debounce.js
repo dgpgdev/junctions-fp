@@ -1,22 +1,30 @@
 import curry from './curry'
+
 /**
-* function debounce
-* @func
-* @memberOf Junction
-*/
-const debounce = function (func, wait, immediate) {
+ * function debounce
+ * debounce function
+ * @memberOf Functions
+ * @function debounce
+ * @param {function} fn function to call after delay
+ * @param {number} wait time to delay function execution
+ * @param {boolean} immediate execute imediatly function
+ * @example {@lang javascript}const count = (x)=> x+1
+ *const d = debounce(count, 1000)
+ *d(1) //call count
+ */
+const debounce = function (fn, wait, immediate) {
     var timeout;
     return function () {
         var context = this,
             args = arguments
         var later = function () {
             timeout = null;
-            if (!immediate) func.apply(context, args)
+            if (!immediate) fn.apply(context, args)
         };
         var callNow = immediate && !timeout
         clearTimeout(timeout)
         timeout = setTimeout(later, wait)
-        if (callNow) func.apply(context, args)
+        if (callNow) fn.apply(context, args)
     }
 }
 export default debounce

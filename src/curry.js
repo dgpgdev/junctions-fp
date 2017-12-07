@@ -1,8 +1,12 @@
 /**
  * function curry
- * @func
- * @memberOf Junction
- * @param {function} fn fonction a curry
+ * @memberOf Functions
+ * @function curry
+ * @param {function} fn function to curry
+ * @returns {function | void} return function or void
+ * @example {@lang javascript}const add = (x,y) => x+y
+ *const z = curry(add)
+ *const result = z(2)(3) //return 5
  */
 const curry = function (fn) {
     var numargs = fn.length;
