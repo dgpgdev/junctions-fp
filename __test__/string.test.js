@@ -1,5 +1,5 @@
-describe("String test", function () {
-    it('test extensions', () => {
-       
-    })
+describe('String test', function () {
+  it('test extensions', () => {
+
+  })
 })

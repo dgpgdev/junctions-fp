@@ -1,5 +1,3 @@
-import curry from './curry'
-
 /**
  * function debounce
  * debounce function
@@ -13,18 +11,18 @@ import curry from './curry'
  *d(1) //call count
  */
 const debounce = function (fn, wait, immediate) {
-    var timeout;
-    return function () {
-        var context = this,
-            args = arguments
-        var later = function () {
-            timeout = null;
-            if (!immediate) fn.apply(context, args)
-        };
-        var callNow = immediate && !timeout
-        clearTimeout(timeout)
-        timeout = setTimeout(later, wait)
-        if (callNow) fn.apply(context, args)
+  var timeout
+  return function () {
+    var context = this
+    var args = arguments
+    var later = function () {
+      timeout = null
+      if (!immediate) fn.apply(context, args)
     }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) fn.apply(context, args)
+  }
 }
 export default debounce

@@ -1,4 +1,3 @@
-import curry from './curry'
 import lastIndex from './lastIndex'
 /**
 * function getStringExtension

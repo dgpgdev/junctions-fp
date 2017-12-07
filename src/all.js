@@ -4,5 +4,5 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const all = curry( (filter, array) => array.every(filter))
+const all = curry((filter, array) => array.every(filter))
 export default all

@@ -11,6 +11,6 @@ import curry from './curry'
  * const y = multiply(4)
  * const result = y(2)//return 8
  */
-const multiply = curry((x,y)=> x * y)
+const multiply = curry((x, y) => x * y)
 
 export default multiply

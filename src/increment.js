@@ -6,5 +6,5 @@
  * @returns {number} decrement result
  * @example {@lang javascript}const result = increment(41) //return 42
  */
-const increment = x => x+1
+const increment = x => x + 1
 export default increment

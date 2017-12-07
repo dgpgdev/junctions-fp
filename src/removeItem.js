@@ -5,5 +5,5 @@ import equal from './equal'
 * @func
 * @memberOf Junction
 */
-const removeItem = curry((item , array) => array.filter(i => !equal(item)(i)))
+const removeItem = curry((item, array) => array.filter(i => !equal(item)(i)))
 export default removeItem

@@ -1,4 +1,3 @@
-import curry from './curry'
 import compose from './compose'
 import gt from './gt'
 import size from './size'

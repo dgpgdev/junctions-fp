@@ -11,5 +11,5 @@ import curry from './curry'
  * const y = substract(10)
  * const result = y(2)//return 8
  */
-const substract = curry((x,y)=> x-y)
+const substract = curry((x, y) => x - y)
 export default substract

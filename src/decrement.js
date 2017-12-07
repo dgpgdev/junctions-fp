@@ -6,5 +6,5 @@
  * @returns {number} decrement result
  * @example {@lang javascript}const result = decrement(42) //return 41
  */
-const decrement = x => x-1
+const decrement = x => x - 1
 export default decrement

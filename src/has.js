@@ -4,5 +4,5 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const has = curry((key , item) => item[key] != undefined ? item : false)
+const has = curry((key, item) => item[key] !== undefined ? item : false)
 export default has

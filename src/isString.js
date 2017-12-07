@@ -8,5 +8,5 @@ import is from './is'
  * @returns {boolean} true if test success
  * @example {@lang javascript}const result = isString('gandalf') //return true
  */
-const isString = curry(value =>  is('string')(value))
+const isString = curry(value => is('string')(value))
 export default isString

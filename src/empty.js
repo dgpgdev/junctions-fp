@@ -1,4 +1,3 @@
-import curry from './curry'
 import compose from './compose'
 import equal from './equal'
 import size from './size'

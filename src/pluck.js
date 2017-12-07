@@ -6,5 +6,5 @@ import get from './get'
 * @func
 * @memberOf Junction
 */
-const pluck = curry((property ,array) => map(get(property))(array))
+const pluck = curry((property, array) => map(get(property))(array))
 export default pluck

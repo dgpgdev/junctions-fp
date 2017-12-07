@@ -4,5 +4,5 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const trim = curry( string => string.trim())
+const trim = curry(string => string.trim())
 export default trim

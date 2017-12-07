@@ -6,5 +6,5 @@ import isString from './isString'
 * @func
 * @memberOf Junction
 */
-const lt = curry((limit,value) => isString()(value) ? value.trim().length < limit : value < limit)
+const lt = curry((limit, value) => isString()(value) ? value.trim().length < limit : value < limit)
 export default lt
