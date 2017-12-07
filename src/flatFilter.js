@@ -5,7 +5,7 @@ import flatMap from './flatMap'
 * @func
 * @memberOf Junction
 */
-const flatFilter = curry((array, filt) => {
-  return flatMap(array, x => x).filter(filt)
+const flatFilter = curry((f, array) => {
+  return flatMap(x => x, array).filter(f)
 })
 export default flatFilter

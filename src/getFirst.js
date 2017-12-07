@@ -4,5 +4,5 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const firstIndex = curry((arr) => arr.slice(0, 1)[0])
-export default firstIndex
+const getFirst = curry((arr) => arr.slice(0, 1)[0])
+export default getFirst

@@ -1,8 +1,8 @@
-import lastIndex from './lastIndex'
+import getLast from './getLast'
 /**
 * function getStringExtension
 * @func
 * @memberOf Junction
 */
-const getStringExtension = string => '.' + lastIndex(string.split('.'))
+const getStringExtension = string => '.' + getLast(string.split('.'))
 export default getStringExtension

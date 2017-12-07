@@ -5,6 +5,7 @@ import equal from './equal'
 * @func
 * @memberOf Junction
 */
+
 const setFirst = curry((value, arr) => {
   const index = arr.findIndex(equal(value))
   if (index === 0) {

@@ -9,7 +9,7 @@
     "build": "babel src -d lib",
     "test": "./node_modules/.bin/jest --coverage --watch",
     "doc": "jsdoc src -r -c conf.json -t ./node_modules/ink-docstrap/template",
-    "lint": "./node_modules/.bin/eslint"
+    "lint": "./node_modules/.bin/eslint src/ --fix"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

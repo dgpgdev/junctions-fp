@@ -4,7 +4,7 @@ import curry from './curry'
 * @func
 * @memberOf Junction
 */
-const flatMap = curry((array, mapper) => {
-  return Array.isArray(array) ? [].concat(...array.map(x => flatMap(x, mapper))) : mapper(array)
+const flatMap = curry((mapper, array) => {
+  return Array.isArray(array) ? [].concat(...array.map(x => flatMap(mapper, x))) : mapper(array)
 })
 export default flatMap

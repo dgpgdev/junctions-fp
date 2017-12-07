@@ -6,9 +6,16 @@ import {
   empty,
   notEmpty,
   contain,
+  getFirst,
+  getLast,
   setFirst,
   setLast,
-  not
+  not,
+  all,
+  filter,
+  map,
+  flatMap,
+  flatFilter
 } from '../src/index'
 
 describe('[ List ]', function () {
@@ -89,5 +96,46 @@ describe('[ List ]', function () {
       expect(setLast({name: 'gobelin', attack: 1}, y)).toEqual([{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}])
       expect(setLast({name: 'dragon', attack: 10}, y)).toEqual([{name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}, {name: 'dragon', attack: 10}])
     })
+    it('should test get first element function', () => {
+      const y = [44, 45, 46]
+      expect(getFirst(y)).toBe(44)
+    })
+    it('should test get last element function', () => {
+      const y = [44, 45, 46]
+      expect(getLast(y)).toBe(46)
+    })
+    it('should test all function to valid condition', () => {
+      const x = item => item > 42
+      const y = [43, 45, 46]
+      const z = [43, 45, 41]
+      expect(all(x, y)).toBe(true)
+      expect(all(x, z)).toBe(false)
+    })
+    it('should test filter function', () => {
+      const x = item => item > 42
+      const y = [43, 45, 46]
+      const z = [43, 45, 41]
+      expect(filter(x, y)).toEqual([43, 45, 46])
+      expect(filter(x, z)).toEqual([43, 45])
+    })
+    it('should test flat filter function', () => {
+      const x = item => item > 45
+      const y = [43, 45, 46]
+      const z = [48, 45, 47]
+      expect(flatFilter(x, [y, z])).toEqual([46, 48, 47])
+    })
+    it('should test map function', () => {
+      const x = item => item + 1
+      const y = [43, 45, 46]
+      expect(map(x, y)).toEqual([44, 46, 47])
+    })
+    it('should test flat map function', () => {
+      const x = item => item + 1
+      const y = [44, 45, 46]
+      const z = [47, 48, 49]
+      expect(flatMap(x, [y, z])).toEqual([45, 46, 47, 48, 49, 50])
+    })
+
+
   })
 })
