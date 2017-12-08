@@ -8,7 +8,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "test": "./node_modules/.bin/jest --coverage --watch",
-    "doc": "jsdoc src -r -d docs -c conf.json -t ./node_modules/ink-docstrap/template",
+    "doc": "jsdoc src -r -R README.md -d docs -c conf.json -t ./node_modules/ink-docstrap/template",
     "lint": "./node_modules/.bin/eslint src/ --fix"
   },
   "devDependencies": {
