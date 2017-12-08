@@ -4,6 +4,7 @@
  * @function size
  * @param {array|string} value la chaine ou le tableau
  * @returns {integer} la taille du tableau
+ * @instance
  * @example {@lang javascript}console.log(size([1, 2, 3])) //return 3
  *console.log(size('123')) //return 3
  */

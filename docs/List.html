@@ -154,7 +154,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".any"><span class="type-signature">&lt;static> </span>any(x, y)</h4>
+    <h4 class="name" id="any"><span class="type-signature"></span>any(x, y)</h4>
     
     
 </dt>
@@ -341,7 +341,7 @@ console.log(any(x, z)) // return true</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".contain"><span class="type-signature">&lt;static> </span>contain(value)</h4>
+    <h4 class="name" id="contain"><span class="type-signature"></span>contain(value)</h4>
     
     
 </dt>
@@ -505,7 +505,7 @@ console.log(contain(8, x)) // return false</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".empty"><span class="type-signature">&lt;static> </span>empty(value)</h4>
+    <h4 class="name" id="empty"><span class="type-signature"></span>empty(value)</h4>
     
     
 </dt>
@@ -670,7 +670,7 @@ console.log(empty(y)) // return false</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".excludeDuplicate"><span class="type-signature">&lt;static> </span>excludeDuplicate(array)</h4>
+    <h4 class="name" id="excludeDuplicate"><span class="type-signature"></span>excludeDuplicate(array)</h4>
     
     
 </dt>
@@ -847,7 +847,577 @@ console.log(excludeDuplicate(a, b))
             
 <hr>
 <dt>
-    <h4 class="name" id=".getDuplicate"><span class="type-signature">&lt;static> </span>getDuplicate(array)</h4>
+    <h4 class="name" id="filter"><span class="type-signature"></span>filter(fn, array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Filtre les donné d'une liste via une condition
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la fonction de filtrage</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		filter.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = item =&gt; item &gt; 45
+const y = [43, 45, 46]
+const z = [48, 45, 47]
+console.log((flatFilter(x, [y, z])) // return [46, 48, 47]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="flatFilter"><span class="type-signature"></span>flatFilter(fn, array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        fusionne tout les tableaux en un seul et applique la fonction de filtrage sur chaque element du tableau
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la fonction de filtrage</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste de tableau a convertir</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		flatFilter.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau a une dimension modifié
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = item =&gt; item &gt; 45
+const y = [43, 45, 46]
+const z = [48, 45, 47]
+console.log((flatFilter(x, [y, z])) // return [46, 48, 47]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="flatMap"><span class="type-signature"></span>flatMap(fn, array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        fusionne tout les tableaux en un seul et applique la fonction de modification sur chaque element du tableau
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la fonction de modification</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste de tableau a convertir</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		flatMap.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau a une dimension modifié
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = item =&gt; item + 1
+const y = [44, 45, 46]
+const z = [47, 48, 49]
+console.log((flatMap(x, [y, z])) // return [45, 46, 47, 48, 49, 50]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getDuplicate"><span class="type-signature"></span>getDuplicate(array)</h4>
     
     
 </dt>
@@ -1014,7 +1584,345 @@ console.log(getDuplicate(x, z)) // return[]</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".hasDuplicate"><span class="type-signature">&lt;static> </span>hasDuplicate(array)</h4>
+    <h4 class="name" id="getFirst"><span class="type-signature"></span>getFirst(array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Récupère le premier item d'une liste
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		getFirst.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    le premier item
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const items = [
+{ name: &#x27;dragon&#x27;, attack: 10 },
+{ name: &#x27;troll&#x27;, attack: 5 },
+{ name: &#x27;gobelin&#x27;, attack: 1 }
+]
+console.log(getFirst(items))
+// return { name: &#x27;dragon&#x27;, attack: 10 }</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getLast"><span class="type-signature"></span>getLast(array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Récupère le dernier item d'une liste
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		getLast.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    le dernier item
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const items = [
+{ name: &#x27;dragon&#x27;, attack: 10 },
+{ name: &#x27;troll&#x27;, attack: 5 },
+{ name: &#x27;gobelin&#x27;, attack: 1 }
+]
+console.log(getLast(items))
+// return { name: &#x27;gobelin&#x27;, attack: 1 }</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="hasDuplicate"><span class="type-signature"></span>hasDuplicate(array)</h4>
     
     
 </dt>
@@ -1177,7 +2085,7 @@ console.log(hasDuplicate(x, y, z)) // return true</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".all"><span class="type-signature">&lt;static> </span>all(x, y)</h4>
+    <h4 class="name" id="all"><span class="type-signature"></span>all(x, y)</h4>
     
     
 </dt>
@@ -1368,7 +2276,556 @@ console.log(all(x, z)) // return false</code></pre>
             
 <hr>
 <dt>
-    <h4 class="name" id=".removeItem"><span class="type-signature">&lt;static> </span>removeItem(array)</h4>
+    <h4 class="name" id="map"><span class="type-signature"></span>map(fn, array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        transforme les donnée d'une liste via une condition
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la fonction de filtrage</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		map.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau de données transformés
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">  const x = item =&gt; item + 1
+const y = [43, 45, 46]
+console.log((map(x, y)) // return [44, 46, 47]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="pluck"><span class="type-signature"></span>pluck(property, array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Récupère toute les valeur definit par property dans les objets d'une liste
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>property</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">le nom de pa propriété</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		pluck.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau contenant toute les valeurs des propriétés
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const items = [{ name: &#x27;dragon&#x27;, attack: 10 }, { name: &#x27;troll&#x27;, attack: 5 }, { name: &#x27;gobelin&#x27;, attack: 1 }]
+console.log((pluck(&#x27;name&#x27;, items)) // return [&#x27;dragon&#x27;, &#x27;troll&#x27;, &#x27;gobelin&#x27;]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeIndex"><span class="type-signature"></span>removeIndex(array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Récupère une liste sans l'item identifié par l'index en paramètre
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		removeIndex.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    la liste des items sans l'item designé par l'index
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const items = [
+{ name: &#x27;dragon&#x27;, attack: 10 },
+{ name: &#x27;troll&#x27;, attack: 5 },
+{ name: &#x27;gobelin&#x27;, attack: 1 }
+]
+console.log(removeIndex(1, items))
+// return [
+// { name: &#x27;dragon&#x27;, attack: 10 },
+// { name: &#x27;gobelin&#x27;, attack: 1 }
+// ]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeItem"><span class="type-signature"></span>removeItem(array)</h4>
     
     
 </dt>
@@ -1497,7 +2954,7 @@ console.log(all(x, z)) // return false</code></pre>
     
             
 <div class="param-desc">
-    la liste des items dupliqué
+    la liste des items sans l'item selectionné
 </div>
 
 
@@ -1540,7 +2997,349 @@ console.log(removeItem({ name: &#x27;troll&#x27;, attack: 5 }, items))
             
 <hr>
 <dt>
-    <h4 class="name" id=".size"><span class="type-signature">&lt;static> </span>size(value)</h4>
+    <h4 class="name" id="setFirst"><span class="type-signature"></span>setFirst(array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        deplace l'item definit en premier dans la liste
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		setFirst.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = [1, 2, 3, 4, 5]
+const y = [{name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;gobelin&#x27;, attack: 1}]
+console.log(setFirst(4)(x)) // return [4, 1, 2, 3, 5])
+console.log(setFirst(1, x)) // return [1, 2, 3, 4, 5])
+console.log(setFirst(5, x)) // return [5, 1, 2, 3, 4])
+
+console.log(setFirst({name: &#x27;troll&#x27;, attack: 5}, y)) // return [{name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;gobelin&#x27;, attack: 1}])
+console.log(setFirst({name: &#x27;dragon&#x27;, attack: 10}, y)) // return [{name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;gobelin&#x27;, attack: 1}])
+console.log(setFirst({name: &#x27;gobelin&#x27;, attack: 1}, y)) // return [{name: &#x27;gobelin&#x27;, attack: 1}, {name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;troll&#x27;, attack: 5}])</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="setLast"><span class="type-signature"></span>setLast(array)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        deplace l'item definit en dernier dans la liste
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la liste des items a testé</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		setLast.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    un nouveau tableau
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">array</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = [1, 2, 3, 4, 5]
+const y = [{name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;gobelin&#x27;, attack: 1}]
+console.log((setLast(4, x)) // return [1, 2, 3, 5, 4]
+console.log((setLast(5, x)) // return [1, 2, 3, 4, 5]
+console.log((setLast(1, x)) // return [2, 3, 4, 5, 1]
+
+console.log((setLast({name: &#x27;troll&#x27;, attack: 5}, y)) // return [{name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;gobelin&#x27;, attack: 1}, {name: &#x27;troll&#x27;, attack: 5}]
+console.log((setLast({name: &#x27;gobelin&#x27;, attack: 1}, y)) // return [{name: &#x27;dragon&#x27;, attack: 10}, {name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;gobelin&#x27;, attack: 1}]
+console.log((setLast({name: &#x27;dragon&#x27;, attack: 10}, y)) // return [{name: &#x27;troll&#x27;, attack: 5}, {name: &#x27;gobelin&#x27;, attack: 1}, {name: &#x27;dragon&#x27;, attack: 10}]</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="size"><span class="type-signature"></span>size(value)</h4>
     
     
 </dt>
@@ -1759,7 +3558,7 @@ console.log(size(&#x27;123&#x27;)) //return 3</code></pre>
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on {42tring}
+		on {10tring}
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

@@ -7,6 +7,7 @@ import curry from './curry'
  * @param {number} x first number
  * @param {number} y second number
  * @returns {number} result divide result
+ * @instance
  * @example {@lang javascript} const result = divide(10,2) //return 5
  * const result = divide(10)(2) //return 5
  * const y = divide(10)

@@ -6,6 +6,7 @@ const url = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1
  * @func
  * @param {any} value value to test
  * @returns {boolean} true if test success
+ * @instance
  * @example {@lang javascript}const result = isValidUrl('http://www.gandalf.com') //return true
  */
 const isValidUrl = value => url.test(value)

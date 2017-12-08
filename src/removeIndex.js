@@ -1,9 +1,22 @@
 import curry from './curry'
 import equal from './equal'
 /**
-* function removeItem
-* @func
-* @memberOf Junction
-*/
+ * Récupère une liste sans l'item identifié par l'index en paramètre
+ * @memberOf List
+ * @function removeIndex
+ * @param {array} array la liste des items a testé
+ * @returns {array} la liste des items sans l'item designé par l'index
+ * @instance
+ * @example {@lang javascript}const items = [
+{ name: 'dragon', attack: 10 },
+{ name: 'troll', attack: 5 },
+{ name: 'gobelin', attack: 1 }
+]
+console.log(removeIndex(1, items))
+// return [
+// { name: 'dragon', attack: 10 },
+// { name: 'gobelin', attack: 1 }
+// ]
+ */
 const removeIndex = curry((index, array) => array.filter((i, ind) => !equal(ind)(index)))
 export default removeIndex

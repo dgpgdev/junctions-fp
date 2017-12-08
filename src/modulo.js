@@ -7,6 +7,7 @@ import curry from './curry'
  * @param {number} x first number
  * @param {number} y second number
  * @returns {number} return modulo result
+ * @instance
  * @example {@lang javascript} const result = modulo(7,2) //return 1
  */
 const modulo = curry((x, y) => x % y)

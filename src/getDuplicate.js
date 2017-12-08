@@ -8,6 +8,7 @@ const duplicate = array => array.filter((a, index, self) => self[index + 1] && s
  * @function getDuplicate
  * @param {array} array la liste des items a testé
  * @returns {array} la liste des items dupliqué
+ * @instance
  * @example {@lang javascript}const x = [1, 2, 3, 4, 5]
 const y = [4, 5, 6, 7, 8]
 const z = [7, 8, 9, 10, 11]

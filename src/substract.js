@@ -6,6 +6,7 @@ import curry from './curry'
  * @param {number} x first number
  * @param {number} y second number
  * @returns {number} substract result
+ * @instance
  * @example {@lang javascript}const result = substract(10,2) //return 8
  * const result = substract(10)(2) //return 8
  * const y = substract(10)

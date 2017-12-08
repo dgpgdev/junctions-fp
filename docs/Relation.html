@@ -154,7 +154,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".defined"><span class="type-signature">&lt;static> </span>defined(value)</h4>
+    <h4 class="name" id="defined"><span class="type-signature"></span>defined(value)</h4>
     
     
 </dt>
@@ -317,7 +317,579 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".is"><span class="type-signature">&lt;static> </span>is(type, value)</h4>
+    <h4 class="name" id="equal"><span class="type-signature"></span>equal(a, b)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        test une egalité qu'elle soit simple ou complexe entre deux éléments
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">le premier élément</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">le deuxième élement</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		equal.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    renvoit true si l'egalité est vérifié
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const x = 42
+const y = &#x27;Gandalf&#x27;
+const z = { name: &#x27;dragon&#x27;, attack: 10 }
+console.log(equal(x, 42)) // return true
+console.log(equal(y, &#x27;Gandalf&#x27;)) // return true
+console.log(equal(z, { name: &#x27;dragon&#x27;, attack: 10 })) // return true</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="gt"><span class="type-signature"></span>gt(limit, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        test une une valeur est strictement supérieur a une autre
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la référence du test de supériorité</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la valeur a testé, si la valeur est un tableau ou une chaine, compare la longueur a la valeur de référence</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		gt.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    renvoit true si la valeur est strictement supérieur
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const limit = gt(10)
+console.log((limit(11)) // return true
+console.log((limit(10)) // return false
+console.log((limit(9)) // return false</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="gt"><span class="type-signature"></span>gt(limit, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        test une une valeur est supérieur ou égal a une autre
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la référence du test de supériorité</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la valeur a testé, si la valeur est un tableau ou une chaine, compare la longueur a la valeur de référence</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		gte.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    renvoit true si la valeur est supérieur ou égal
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const limit = gte(10)
+console.log((limit(11)) // return true
+console.log((limit(10)) // return true
+console.log((limit(9)) // return false</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="is"><span class="type-signature"></span>is(type, value)</h4>
     
     
 </dt>
@@ -377,7 +949,7 @@
 
             
 
-            <td class="description last">type to test</td>
+            <td class="description last">le type a testé</td>
         </tr>
 
     
@@ -401,7 +973,7 @@
 
             
 
-            <td class="description last">value to test</td>
+            <td class="description last">la valeur a testé</td>
         </tr>
 
     
@@ -470,7 +1042,7 @@
     
             
 <div class="param-desc">
-    true if test success
+    true si la valeur est bien du type précisé
 </div>
 
 
@@ -494,7 +1066,7 @@
     
         <h5>Example</h5>
         
-    <pre><code class="language-javascript">const result = is(&#x27;string&#x27;, &#x27;gandalf&#x27;) //return true</code></pre>
+    <pre><code class="language-javascript">const result = is(&#x27;string&#x27;, &#x27;gandalf&#x27;) // return true</code></pre>
 
 
     
@@ -504,7 +1076,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isInt"><span class="type-signature">&lt;static> </span>isInt(value)</h4>
+    <h4 class="name" id="isInt"><span class="type-signature"></span>isInt(value)</h4>
     
     
 </dt>
@@ -512,7 +1084,7 @@
 
     
     <div class="description">
-        test if value is an Integer
+        test la valeur est un Integer
     </div>
     
 
@@ -564,7 +1136,7 @@
 
             
 
-            <td class="description last">value to test</td>
+            <td class="description last">la valeur a testé</td>
         </tr>
 
     
@@ -633,7 +1205,7 @@
     
             
 <div class="param-desc">
-    true if test success
+    true si la valeur est un entier
 </div>
 
 
@@ -667,7 +1239,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isNumber"><span class="type-signature">&lt;static> </span>isNumber(value)</h4>
+    <h4 class="name" id="isNumber"><span class="type-signature"></span>isNumber(value)</h4>
     
     
 </dt>
@@ -675,7 +1247,7 @@
 
     
     <div class="description">
-        test if value is a Number
+        test la valeur est un nombre
     </div>
     
 
@@ -727,7 +1299,7 @@
 
             
 
-            <td class="description last">value to test</td>
+            <td class="description last">value a tester</td>
         </tr>
 
     
@@ -796,7 +1368,7 @@
     
             
 <div class="param-desc">
-    true if test success
+    true si la valeur est un nombre
 </div>
 
 
@@ -830,7 +1402,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isString"><span class="type-signature">&lt;static> </span>isString(value)</h4>
+    <h4 class="name" id="isString"><span class="type-signature"></span>isString(value)</h4>
     
     
 </dt>
@@ -838,7 +1410,7 @@
 
     
     <div class="description">
-        test if value is a String
+        Test si la valeur est bien une chaine
     </div>
     
 
@@ -890,7 +1462,7 @@
 
             
 
-            <td class="description last">value to test</td>
+            <td class="description last">la valeur a testé</td>
         </tr>
 
     
@@ -959,7 +1531,7 @@
     
             
 <div class="param-desc">
-    true if test success
+    true si la valeur est une chaine
 </div>
 
 
@@ -983,7 +1555,7 @@
     
         <h5>Example</h5>
         
-    <pre><code class="language-javascript">const result = isString(&#x27;gandalf&#x27;) //return true</code></pre>
+    <pre><code class="language-javascript">const result = isString(&#x27;gandalf&#x27;) // return true</code></pre>
 
 
     
@@ -993,7 +1565,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isValidEmail"><span class="type-signature">&lt;static> </span>isValidEmail(value)</h4>
+    <h4 class="name" id="isValidEmail"><span class="type-signature"></span>isValidEmail(value)</h4>
     
     
 </dt>
@@ -1156,7 +1728,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".isValidUrl"><span class="type-signature">&lt;static> </span>isValidUrl(value)</h4>
+    <h4 class="name" id="isValidUrl"><span class="type-signature"></span>isValidUrl(value)</h4>
     
     
 </dt>
@@ -1315,6 +1887,386 @@
     
 </dd>
 
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="lt"><span class="type-signature"></span>lt(limit, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        test une une valeur est strictement inférieur a une autre
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la référence du test d'infériorité</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la valeur a testé, si la valeur est un tableau ou une chaine, compare la longueur a la valeur de référence</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		lt.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    renvoit true si la valeur est strictement inférieur
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const limit = lt(10)
+console.log((limit(11)) // return false
+console.log((limit(10)) // return false
+console.log((limit(9)) // return true</code></pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="lt"><span class="type-signature"></span>lt(limit, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        test une une valeur est inférieur ou égala une autre
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la référence du test d'infériorité</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">la valeur a testé, si la valeur est un tableau ou une chaine, compare la longueur a la valeur de référence</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		lte.js
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    renvoit true si la valeur est inférieur ou égal
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre><code class="language-javascript">const limit = lte(10)
+console.log((limit(11)) // return false
+console.log((limit(10)) // return true
+console.log((limit(9)) // return true</code></pre>
+
+
+    
+</dd>
+
         </dl>
     
 
@@ -1371,7 +2323,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on {42tring}
+		on {10tring}
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

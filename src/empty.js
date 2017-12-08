@@ -7,6 +7,7 @@ import size from './size'
  * @function empty
  * @param {array|string} value la valeur a tester
  * @returns {boolean}
+ * @instance
  * @example {@lang javascript}const x = []
  *const y = [1, 2, 3]
  *console.log(empty(x)) // return true

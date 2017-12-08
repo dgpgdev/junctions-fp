@@ -5,7 +5,8 @@ import equal from './equal'
  * @memberOf List
  * @function removeItem
  * @param {array} array la liste des items a testé
- * @returns {array} la liste des items dupliqué
+ * @returns {array} la liste des items sans l'item selectionné
+ * @instance
  * @example {@lang javascript}const items = [
 { name: 'dragon', attack: 10 },
 { name: 'troll', attack: 5 },

@@ -1,12 +1,13 @@
 import curry from './curry'
 import is from './is'
 /**
- * test if value is a String
+ * Test si la valeur est bien une chaine
  * @memberOf Relation
- * @func
- * @param {any} value value to test
- * @returns {boolean} true if test success
- * @example {@lang javascript}const result = isString('gandalf') //return true
+ * @function isString
+ * @param {any} value la valeur a testé
+ * @returns {boolean} true si la valeur est une chaine
+ * @instance
+ * @example {@lang javascript}const result = isString('gandalf') // return true
  */
 const isString = curry(value => is('string')(value))
 export default isString

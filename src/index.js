@@ -53,6 +53,7 @@ export { default as isValidUrl } from './isValidUrl'
 export { default as containDigit } from './containDigit'
 export { default as trim } from './trim'
 export { default as escapeRegExp } from './escapeRegExp'
+
 /**
  * List function
  * @namespace List

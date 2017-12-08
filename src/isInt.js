@@ -1,10 +1,11 @@
 import curry from './curry'
 /**
- * test if value is an Integer
+ * test la valeur est un Integer
  * @memberOf Relation
- * @func
- * @param {any} value value to test
- * @returns {boolean} true if test success
+ * @function isInt
+ * @param {any} value la valeur a testé
+ * @returns {boolean} true si la valeur est un entier
+ * @instance
  * @example {@lang javascript}const result = isInt(42) //return true
  */
 const isInt = curry(value => Number.isInteger(value))

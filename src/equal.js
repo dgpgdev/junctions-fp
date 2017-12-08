@@ -1,10 +1,20 @@
 import curry from './curry'
 import is from './is.js'
 /**
-* function deepEqual
-* @func
-* @memberOf Junction
-*/
+ * test une egalité qu'elle soit simple ou complexe entre deux éléments
+ * @memberOf Relation
+ * @function equal
+ * @param {any} a le premier élément
+ * @param {any} b le deuxième élement
+ * @returns {boolean} renvoit true si l'egalité est vérifié
+ * @instance
+ * @example {@lang javascript}const x = 42
+const y = 'Gandalf'
+const z = { name: 'dragon', attack: 10 }
+console.log(equal(x, 42)) // return true
+console.log(equal(y, 'Gandalf')) // return true
+console.log(equal(z, { name: 'dragon', attack: 10 })) // return true
+ */
 const equal = curry((a, b) => {
   const isObject = is('object')
   if (isObject(a) && isObject(b)) {

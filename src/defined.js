@@ -6,6 +6,7 @@ import curry from './curry'
  * @func
  * @param {any} value value to test
  * @returns {boolean} true if test success
+ * @instance
  * @example {@lang javascript}const result = noDefined(null) //return true
  */
 const defined = curry(value => value !== undefined && value != null && value !== '')

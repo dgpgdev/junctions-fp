@@ -6,6 +6,7 @@ import equal from './equal'
  * @function contain
  * @param {array|string} value la valeur a tester
  * @returns {boolean}
+ * @instance
  * @example {@lang javascript}const x = [1, 2, 3, 4, 5]
  *console.log(contain(4, x)) // return true
  *console.log(contain(8, x)) // return false

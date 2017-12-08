@@ -102,8 +102,12 @@ describe('[ Relation ]', function () {
   it('should test if value is greater than 10', () => {
     const limit = gt(10)
     expect(limit(11)).toBe(true)
+    expect(limit([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])).toBe(true)
+    expect(limit('hello world no pain no gain')).toBe(true)
     expect(limit(10)).toBe(false)
     expect(limit(9)).toBe(false)
+    expect(limit([1, 2, 3, 4])).toBe(false)
+    expect(limit('hello')).toBe(false)
   })
   it('should test if value is greater or equal than 10', () => {
     const limit = gte(10)

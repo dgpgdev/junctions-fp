@@ -5,6 +5,7 @@
  * @function compose
  * @param {function} fns list of function to compose
  * @returns {any} return functions list result
+ * @instance
  * @example {@lang javascript}const creatures = [{name:'dragon', attack:10}, {name:'troll', attack:5}, {name:'gobelin', attack:1}]
  *const getAttackValues = get('attack')// get attack value
  *const isGreaterthan1 = gt(1) //valid condition n > 1
