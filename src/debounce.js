@@ -6,7 +6,8 @@
  * @param {function} fn function to call after delay
  * @param {number} wait time to delay function execution
  * @param {boolean} immediate execute imediatly function
- * @example {@lang javascript}const count = (x)=> x+1
+ * @instance
+ * @example {@lang javascript}const count = (x) => x + 1
  *const d = debounce(count, 1000)
  *d(1) //call count
  */

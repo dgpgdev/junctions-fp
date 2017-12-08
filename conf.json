@@ -1,7 +1,7 @@
 {
 	"templates": {
 		"systemName": "Junctions",
-		"footer": "my footer",
+		"footer": "",
 		"copyright": "Gauthier de Girodon Pralong",
 		"includeDate": "true",
 		"navType": "vertical",
@@ -14,6 +14,7 @@
 		"dateFormat": "{string}",
 		"syntaxTheme": "{string}",
 		"sort": "true",
-		"search": "true"
+    "search": "true",
+    "logoFile":"img/logo.png"
 	}
 }
