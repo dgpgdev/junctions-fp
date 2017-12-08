@@ -15,7 +15,10 @@ import {
   filter,
   map,
   flatMap,
-  flatFilter
+  flatFilter,
+  pluck,
+  removeItem,
+  removeIndex
 } from '../src/index'
 
 describe('[ List ]', function () {
@@ -135,7 +138,17 @@ describe('[ List ]', function () {
       const z = [47, 48, 49]
       expect(flatMap(x, [y, z])).toEqual([45, 46, 47, 48, 49, 50])
     })
-
-
+    it('should test pluck function', () => {
+      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
+      expect(pluck('name', items)).toEqual(['dragon', 'troll', 'gobelin'])
+    })
+    it('should test removeItem function', () => {
+      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
+      expect(removeItem({ name: 'troll', attack: 5 }, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
+    })
+    it('should test removeIndex function', () => {
+      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
+      expect(removeIndex(1, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
+    })
   })
 })
