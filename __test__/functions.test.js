@@ -4,7 +4,7 @@ import {
   curry,
   debounce,
   not,
-  getProp,
+  getProps,
   gt
 } from '../src/index'
 
@@ -33,7 +33,7 @@ describe('functions test', function () {
 
   it('compose', () => {
     const creatures = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
-    const getAttackValues = getProp('attack')// get attack value
+    const getAttackValues = getProps('attack')// get attack value
     const isGreaterthan1 = gt(1) // valid condition n > 1
     const myFilter = compose(isGreaterthan1, getAttackValues) // compose function
     const result = creatures.filter(myFilter) // return  [{name:'dragon', attack:10}, {name:'troll', attack:5}]
@@ -42,7 +42,7 @@ describe('functions test', function () {
 
   it('pipe', () => {
     const creatures = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
-    const getAttackValues = getProp('attack')// get attack value
+    const getAttackValues = getProps('attack')// get attack value
     const isGreaterthan1 = gt(1) // valid condition n > 1
     const myFilter = pipe(getAttackValues, isGreaterthan1)
     // compose function

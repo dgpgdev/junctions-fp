@@ -4572,7 +4572,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #18BC9C;
+  background-color: #2c3e50;
   border-color: transparent;
 }
 .navbar-inverse .navbar-brand {
@@ -4591,7 +4591,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #2C3E50;
+  color: rgb(34, 172, 108);
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -4638,7 +4638,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #2C3E50;
+    color: rgb(34, 172, 108);
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
@@ -7044,7 +7044,7 @@ img.branding-logo {
 }
 .page-title {
   font-size: 220%;
-  color: #18BC9C;
+  color: #0e9ba5;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 7px;

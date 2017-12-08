@@ -1,6 +1,6 @@
 import {
   defined,
-  notDefined,
+  not,
   equal,
   gt,
   gte,
@@ -72,12 +72,12 @@ describe('[ Relation ]', function () {
       name: 'dragon',
       attack: 10
     }
-    expect(notDefined(null)).toBe(true)
-    expect(notDefined(undefined)).toBe(true)
-    expect(notDefined('')).toBe(true)
-    expect(notDefined(x)).toBe(false)
-    expect(notDefined(y)).toBe(false)
-    expect(notDefined(z)).toBe(false)
+    expect(not(defined(null))).toBe(true)
+    expect(not(defined(undefined))).toBe(true)
+    expect(not(defined(''))).toBe(true)
+    expect(not(defined(x))).toBe(false)
+    expect(not(defined(y))).toBe(false)
+    expect(not(defined(z))).toBe(false)
   })
   it('should test if values are equal', () => {
     const x = 42

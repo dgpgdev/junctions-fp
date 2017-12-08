@@ -4,7 +4,6 @@ import {
   getDuplicate,
   size,
   empty,
-  notEmpty,
   contain,
   getFirst,
   getLast,
@@ -32,8 +31,6 @@ describe('[ List ]', function () {
     it('should test if array is not empty ', () => {
       const x = []
       const y = [1, 2, 3]
-      expect(notEmpty(x)).toBe(false)
-      expect(notEmpty(y)).toBe(true)
       expect(not(empty(x))).toBe(false)
       expect(not(empty(y))).toBe(true)
     })

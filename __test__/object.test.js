@@ -1,16 +1,16 @@
 import {
   has,
-  getProp,
+  getProps,
   merge,
   mergeAll,
   modify
 } from '../src/index'
 
 describe('[ Object ]', function () {
-  it('should test get', () => {
-    const item = { name: 'Gandalf', age: 'unknow' }
-    expect(getProp('name', item)).toBe('Gandalf')
-    expect(getProp('attack', item)).toBe(null)
+  it('should test getProps', () => {
+    const item = { name: 'Gandalf', age: 'unknow', type: 'magical', weapon: undefined }
+    expect(getProps('name', item)).toBe('Gandalf')
+    expect(getProps(['name', 'age', 'weapon'], item)).toEqual(['Gandalf', 'unknow', undefined])
   })
   it('should test has', () => {
     const item = { name: 'Gandalf', age: 'unknow' }
