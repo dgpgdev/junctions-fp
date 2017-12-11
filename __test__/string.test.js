@@ -1,13 +1,17 @@
 import { getStringExtension,
   containDigit,
   escapeRegExp,
-  trim
- } from '../src/index'
+  trim, pipe,equal
+} from '../src/index'
 
 describe('[ Object ]', function () {
   it('should test getStringExtension', () => {
     const ext = 'picture.jpg'
+    const ext2 = 'picture.gif'
+    const isAgif = pipe(getStringExtension, equal('.gif'))
     expect(getStringExtension(ext)).toBe('.jpg')
+    expect(isAgif(ext)).toBe(false)
+    expect(isAgif(ext2)).toBe(true)
   })
   it('should test containDigit', () => {
     const ext = 'picture42.jpg'

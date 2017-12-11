@@ -11,5 +11,5 @@ import equal from './equal'
  *console.log(contain(4, x)) // return true
  *console.log(contain(8, x)) // return false
   */
-const contain = curry((value, array) => array.some(equal(value)))
+const contain = curry((value, array) => Array.isArray(value) ? array.some(u => value.some(equal(u))) : array.some(equal(value)))
 export default contain

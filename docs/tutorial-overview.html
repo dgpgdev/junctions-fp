@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Junctions Index</title>
+	<title>Junctions Tutorial: overview</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -69,58 +69,33 @@
 <div class="row">
 
 	
-	<div class="col-md-8">
+	<div class="col-md-12">
 	
 		<div id="main">
-			
+			<section class="tutorial-section">
 
-	
-	
+<header>
+    
 
+    <h2>overview</h2>
+</header>
 
+<article>
+    <h3>Manipuler des String</h3><h5>Detecter si des fichiers on la bonne extension</h5><pre class="prettyprint source lang-javascript"><code>import { getStringExtension, map, contain } from 'junctions'
 
+const authorizedExtension = ['.jpg', '.png']
+const files = ['hello.jpg', 'mypic.jpg', 'vector.svg', 'logo.png', 'video.mp4']
+const filesExtension = map(getStringExtension, files) // [ '.jpg', '.jpg', '.svg', '.png', '.mp4' ]
+const validFiles = contain(authorizedExtension, filesExtension) // true</code></pre>
+</article>
 
-
-
-
-
-
-
-
-	
-	
-
-
-
-
-
-    <section class="readme-section">
-        <article><h1>Junctions</h1><p>petite librairie de programmation fonctionnelle</p>
-<p><a href="https://dgpgdev.github.io/junctions/">documentation</a></p>
-<ul>
-<li><a href="https://dgpgdev.github.io/junctions/Functions.html">Functions</a></li>
-<li><a href="https://dgpgdev.github.io/junctions/Object.html">Object</a></li>
-<li><a href="https://dgpgdev.github.io/junctions/Math.html">Math</a></li>
-<li><a href="https://dgpgdev.github.io/junctions/Relation.html">Relation</a></li>
-<li><a href="https://dgpgdev.github.io/junctions/String.html">String</a></li>
-</ul></article>
-    </section>
-
-
-
-
-
-
+</section>
 
 		</div>
 	</div>
 
 	<div class="clearfix"></div>
 
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
 	
 
 </div>

@@ -3541,13 +3541,13 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #7b8a8b;
+  color: #ffffff;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #fff;
+  color: rgb(34, 172, 108);
   background-color: #2C3E50;
 }
 .dropdown-menu > .active > a,
@@ -4432,6 +4432,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+  background: #2c3e50;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
@@ -7057,6 +7058,9 @@ footer {
 code {
   background-color: inherit;
   border: none;
+}
+.name{
+    color: rgb(34, 172, 108);
 }
 .buffered-name {
   padding-top: 62px;
