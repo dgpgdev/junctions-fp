@@ -7,3 +7,4 @@ petite librairie de programmation fonctionnelle
 - [Math](https://dgpgdev.github.io/junctions/Math.html)
 - [Relation](https://dgpgdev.github.io/junctions/Relation.html)
 - [String](https://dgpgdev.github.io/junctions/String.html)
+- [List](https://dgpgdev.github.io/junctions/List.html)
