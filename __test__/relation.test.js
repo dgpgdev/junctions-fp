@@ -11,7 +11,8 @@ import {
   isNumber,
   isString,
   isValidEmail,
-  isValidUrl
+  isValidUrl,
+  between
 } from '../src/index'
 
 describe('[ Relation ]', function () {
@@ -126,5 +127,16 @@ describe('[ Relation ]', function () {
     expect(limit(11)).toBe(false)
     expect(limit(10)).toBe(true)
     expect(limit(9)).toBe(true)
+  })
+  it('should test between', () => {
+    expect(between(5, 10, 8)).toBe(true)
+    expect(between(5, 10, 10)).toBe(true)
+    expect(between(5, 10, 5)).toBe(true)
+    expect(between(5, 10, 4)).toBe(false)
+    expect(between(5, 10, 11)).toBe(false)
+    expect(between(5, 10, 8, true)).toBe(true)
+    expect(between(5, 10, 10, true)).toBe(false)
+    expect(between(5, 10, 5, true)).toBe(false)
+    expect(between(5, 10, 4, true)).toBe(false)
   })
 })

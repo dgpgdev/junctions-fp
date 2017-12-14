@@ -33,6 +33,7 @@ export { default as gt } from './gt'
 export { default as gte } from './gte'
 export { default as lt } from './lt'
 export { default as lte } from './lte'
+export { default as between } from './between'
 
 /**
  * Object function
