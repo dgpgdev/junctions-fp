@@ -17,7 +17,8 @@ import {
   flatFilter,
   pluck,
   removeItem,
-  removeIndex
+  removeIndex,
+  transform2D
 } from '../src/index'
 
 describe('[ List ]', function () {
@@ -146,6 +147,13 @@ describe('[ List ]', function () {
     it('should test removeIndex function', () => {
       const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
       expect(removeIndex(1, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
+    })
+    it('should test aperture function', () => {
+      const items = [1, 2, 3, 4, 5, 6]
+      console.log(transform2D(7, items))
+      console.log(transform2D(4, items))
+      console.log(transform2D(3, items))
+      expect(transform2D(3, items)).toEqual([[1, 2, 3], [4, 5, 6]])
     })
   })
 })

@@ -9,8 +9,7 @@ import curry from './curry'
  * @instance
  * @example {@lang javascript}const x = item => item > 45
 const y = [43, 45, 46]
-const z = [48, 45, 47]
-console.log((flatFilter(x, [y, z])) // return [46, 48, 47]
+console.log((filter(x, y)) // return [43]
  */
 const filter = curry((fn, array) => array.filter(fn))
 export default filter
