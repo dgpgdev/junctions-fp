@@ -3,7 +3,7 @@ import isNumber from './isNumber'
 /**
  * test une une valeur est supérieur ou égal a une autre
  * @memberOf Relation
- * @function gt
+ * @function gte
  * @param {any} limit la référence du test de supériorité
  * @param {any} value la valeur a testé, si la valeur est un tableau ou une chaine, compare la longueur a la valeur de référence
  * @returns {boolean} renvoit true si la valeur est supérieur ou égal

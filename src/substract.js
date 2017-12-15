@@ -2,7 +2,7 @@ import curry from './curry'
 /**
  * function substract
  * @memberOf Math
- * @function add
+ * @function substract
  * @param {number} x first number
  * @param {number} y second number
  * @returns {number} substract result
