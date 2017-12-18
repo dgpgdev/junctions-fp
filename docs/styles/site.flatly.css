@@ -3541,13 +3541,13 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #ffffff;
+  color: #7b8a8b;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: rgb(34, 172, 108);
+  color: #fff;
   background-color: #2C3E50;
 }
 .dropdown-menu > .active > a,
@@ -4432,7 +4432,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  background: #2c3e50;
 }
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
@@ -4573,7 +4572,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-  background-color: #2c3e50;
+  background-color: #18BC9C;
   border-color: transparent;
 }
 .navbar-inverse .navbar-brand {
@@ -4581,7 +4580,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #18BC9C
+  color: #2C3E50;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
@@ -4592,7 +4591,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: rgb(34, 172, 108);
+  color: #2C3E50;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,
@@ -4639,7 +4638,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: rgb(34, 172, 108);
+    color: #2C3E50;
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
@@ -7045,7 +7044,7 @@ img.branding-logo {
 }
 .page-title {
   font-size: 220%;
-  color: #0e9ba5;
+  color: #18BC9C;
   font-weight: 700;
   padding-top: 10px;
   padding-bottom: 7px;
@@ -7058,9 +7057,6 @@ footer {
 code {
   background-color: inherit;
   border: none;
-}
-.name{
-    color: rgb(34, 172, 108);
 }
 .buffered-name {
   padding-top: 62px;

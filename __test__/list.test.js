@@ -18,7 +18,8 @@ import {
   pluck,
   removeItem,
   removeIndex,
-  transform2D
+  transform2D,
+  swap
 } from '../src/index'
 
 describe('[ List ]', function () {
@@ -148,12 +149,15 @@ describe('[ List ]', function () {
       const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
       expect(removeIndex(1, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
     })
-    it('should test aperture function', () => {
+    it('should test transform2D function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      console.log(transform2D(7, items))
-      console.log(transform2D(4, items))
-      console.log(transform2D(3, items))
       expect(transform2D(3, items)).toEqual([[1, 2, 3], [4, 5, 6]])
+    })
+    it('should test swap function', () => {
+      const items = [1, 2, 3, 4, 5, 6]
+      const y = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
+      expect(swap(3, 6, items)).toEqual([1, 2, 6, 4, 5, 3])
+      expect(swap({name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, y)).toEqual([{name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, {name: 'gobelin', attack: 1}])
     })
   })
 })
