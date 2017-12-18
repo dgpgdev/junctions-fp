@@ -1,5 +1,5 @@
 {
-  "name": "junctions",
+  "name": "junctions-fp",
   "version": "1.0.0",
   "description": "js functionnal programmin library",
   "main": "lib/index.js",
