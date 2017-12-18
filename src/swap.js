@@ -1,9 +1,11 @@
 import curry from './curry'
 import equal from './equal'
 /**
- * deplace l'item definit en dernier dans la liste
+ * Interverti les items de la liste
  * @memberOf List
  * @function swap
+ * @param {any} a le premier item a intervertir
+ * @param {any} b le deuxième item a intervertir
  * @param {array} array la liste des items a testé
  * @returns {array} un nouveau tableau
  * @instance

@@ -1,10 +1,10 @@
-# Junctions
-petite librairie de programmation fonctionnelle
+# junctions-fp
+little functionnal programming library
 
-[documentation](https://dgpgdev.github.io/junctions/)
-- [Functions](https://dgpgdev.github.io/junctions/Functions.html)
-- [Object](https://dgpgdev.github.io/junctions/Object.html)
-- [Math](https://dgpgdev.github.io/junctions/Math.html)
-- [Relation](https://dgpgdev.github.io/junctions/Relation.html)
-- [String](https://dgpgdev.github.io/junctions/String.html)
-- [List](https://dgpgdev.github.io/junctions/List.html)
+[documentation](https://dgpgdev.github.io/junctions-fp/)
+- [Functions](https://dgpgdev.github.io/junctions-fp/Functions.html)
+- [Object](https://dgpgdev.github.io/junctions-fp/Object.html)
+- [Math](https://dgpgdev.github.io/junctions-fp/Math.html)
+- [Relation](https://dgpgdev.github.io/junctions-fp/Relation.html)
+- [String](https://dgpgdev.github.io/junctions-fp/String.html)
+- [List](https://dgpgdev.github.io/junctions-fp/List.html)
