@@ -1,6 +1,6 @@
 {
   "name": "junctions-fp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "js functionnal programmin library",
   "main": "lib/index.js",
   "author": "Gauthier de Girodon Pralong",
