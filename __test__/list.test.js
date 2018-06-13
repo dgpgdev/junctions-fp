@@ -63,11 +63,44 @@ describe('[ List ]', function () {
       const y = [4, 5, 6, 7, 8]
       const z = [7, 8, 9, 10, 11]
 
-      const a = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
-      const b = [{name: 'dragon', attack: 10}, {name: 'kevin', attack: 3}, {name: 'jedi', attack: 6}]
+      const a = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
+      const b = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'kevin',
+        attack: 3
+      }, {
+        name: 'jedi',
+        attack: 6
+      }]
 
       expect(excludeDuplicate(x, y, z)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-      expect(excludeDuplicate(a, b)).toEqual([{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}, {name: 'kevin', attack: 3}, {name: 'jedi', attack: 6}])
+      expect(excludeDuplicate(a, b)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }, {
+        name: 'kevin',
+        attack: 3
+      }, {
+        name: 'jedi',
+        attack: 6
+      }])
     })
   })
   describe('[ MANIPULATE ]', () => {
@@ -78,25 +111,115 @@ describe('[ List ]', function () {
     })
     it('should test set item to first index', () => {
       const x = [1, 2, 3, 4, 5]
-      const y = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
+      const y = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
       expect(setFirst(4)(x)).toEqual([4, 1, 2, 3, 5])
       expect(setFirst(1, x)).toEqual([1, 2, 3, 4, 5])
       expect(setFirst(5, x)).toEqual([5, 1, 2, 3, 4])
 
-      expect(setFirst({name: 'troll', attack: 5}, y)).toEqual([{name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, {name: 'gobelin', attack: 1}])
-      expect(setFirst({name: 'dragon', attack: 10}, y)).toEqual([{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}])
-      expect(setFirst({name: 'gobelin', attack: 1}, y)).toEqual([{name: 'gobelin', attack: 1}, {name: 'dragon', attack: 10}, {name: 'troll', attack: 5}])
+      expect(setFirst({
+        name: 'troll',
+        attack: 5
+      }, y)).toEqual([{
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
+      expect(setFirst({
+        name: 'dragon',
+        attack: 10
+      }, y)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
+      expect(setFirst({
+        name: 'gobelin',
+        attack: 1
+      }, y)).toEqual([{
+        name: 'gobelin',
+        attack: 1
+      }, {
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }])
     })
     it('should test set item to last index', () => {
       const x = [1, 2, 3, 4, 5]
-      const y = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
+      const y = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
       expect(setLast(4, x)).toEqual([1, 2, 3, 5, 4])
       expect(setLast(5, x)).toEqual([1, 2, 3, 4, 5])
       expect(setLast(1, x)).toEqual([2, 3, 4, 5, 1])
 
-      expect(setLast({name: 'troll', attack: 5}, y)).toEqual([{name: 'dragon', attack: 10}, {name: 'gobelin', attack: 1}, {name: 'troll', attack: 5}])
-      expect(setLast({name: 'gobelin', attack: 1}, y)).toEqual([{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}])
-      expect(setLast({name: 'dragon', attack: 10}, y)).toEqual([{name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}, {name: 'dragon', attack: 10}])
+      expect(setLast({
+        name: 'troll',
+        attack: 5
+      }, y)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }, {
+        name: 'troll',
+        attack: 5
+      }])
+      expect(setLast({
+        name: 'gobelin',
+        attack: 1
+      }, y)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
+      expect(setLast({
+        name: 'dragon',
+        attack: 10
+      }, y)).toEqual([{
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }, {
+        name: 'dragon',
+        attack: 10
+      }])
     })
     it('should test get first element function', () => {
       const y = [44, 45, 46]
@@ -138,26 +261,95 @@ describe('[ List ]', function () {
       expect(flatMap(x, [y, z])).toEqual([45, 46, 47, 48, 49, 50])
     })
     it('should test pluck function', () => {
-      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
+      const items = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
       expect(pluck('name', items)).toEqual(['dragon', 'troll', 'gobelin'])
     })
     it('should test removeItem function', () => {
-      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
-      expect(removeItem({ name: 'troll', attack: 5 }, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
+      const items = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
+      expect(removeItem({
+        name: 'troll',
+        attack: 5
+      }, items)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
     })
     it('should test removeIndex function', () => {
-      const items = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
-      expect(removeIndex(1, items)).toEqual([{ name: 'dragon', attack: 10 }, { name: 'gobelin', attack: 1 }])
+      const items = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
+      expect(removeIndex(1, items)).toEqual([{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
     })
     it('should test transform2D function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      expect(transform2D(3, items)).toEqual([[1, 2, 3], [4, 5, 6]])
+      expect(transform2D(3, items)).toEqual([
+        [1, 2, 3],
+        [4, 5, 6]
+      ])
     })
     it('should test swap function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      const y = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
+      const y = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
       expect(swap(3, 6, items)).toEqual([1, 2, 6, 4, 5, 3])
-      expect(swap({name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, y)).toEqual([{name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, {name: 'gobelin', attack: 1}])
+      expect(swap({
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'dragon',
+        attack: 10
+      }, y)).toEqual([{
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }])
     })
   })
 })

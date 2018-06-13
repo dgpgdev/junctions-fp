@@ -1,6 +1,7 @@
 import {
   has,
   getProps,
+  delProps,
   merge,
   mergeAll,
   modify
@@ -11,6 +12,12 @@ describe('[ Object ]', function () {
     const item = { name: 'Gandalf', age: 'unknow', type: 'magical', weapon: undefined }
     expect(getProps('name', item)).toBe('Gandalf')
     expect(getProps(['name', 'age', 'weapon'], item)).toEqual(['Gandalf', 'unknow', undefined])
+  })
+  it('should test delProps', () => {
+    const item = { name: 'Gandalf', age: 'unknow', type: 'magical', weapon: undefined }
+    expect(delProps('type', item)).toEqual({ name: 'Gandalf', age: 'unknow', weapon: undefined })
+    expect(delProps(['type', 'age', 'weapon'], item)).toEqual({ name: 'Gandalf'})
+    //expect(delProps(['name', 'age', 'weapon'], item)).toEqual(['Gandalf', 'unknow', undefined])
   })
   it('should test has', () => {
     const item = { name: 'Gandalf', age: 'unknow' }
