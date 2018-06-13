@@ -14,8 +14,8 @@ import curry from './curry'
  * const result = y(2)//return 12
  */
 const delProps = curry((props, item) => {
-  const clone = {...item}
-  if(Array.isArray(props)){
+  const clone = Object.assign(item, {})
+  if (Array.isArray(props)) {
     props.forEach(p => {
       delete clone[p]
     })
