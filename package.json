@@ -1,6 +1,6 @@
 {
   "name": "junctions-fp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "js functionnal programmin library",
   "main": "lib/index.js",
   "author": "Gauthier de Girodon Pralong",
@@ -8,7 +8,6 @@
   "scripts": {
     "build": "babel src -d lib",
     "test": "./node_modules/.bin/jest --coverage --watch",
-    "doc": "jsdoc src -u tutorials -r -R README.md -d docs -c conf.json -t ./node_modules/ink-docstrap/template",
     "lint": "./node_modules/.bin/eslint src/ --fix"
   },
   "devDependencies": {
