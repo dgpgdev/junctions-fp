@@ -10,14 +10,19 @@ import equal from './equal'
  * @returns {array} un nouveau tableau
  * @instance
  * @example {@lang javascript}const items = [1, 2, 3, 4, 5, 6]
-const creatures = [{name: 'dragon', attack: 10}, {name: 'troll', attack: 5}, {name: 'gobelin', attack: 1}]
 swap(3, 6, items)) // return [1, 2, 6, 4, 5, 3]
-swap({name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, y))
+
+const creatures = [
+  {name: 'dragon', attack: 10},
+  {name: 'troll', attack: 5},
+  {name: 'gobelin', attack: 1}]
+
+swap({name: 'troll', attack: 5}, {name: 'dragon', attack: 10}, creatures))
 // return [
-{name: 'troll', attack: 5},
-{name: 'dragon', attack: 10},
-{name: 'gobelin', attack: 1}
-]
+// {name: 'troll', attack: 5},
+// {name: 'dragon', attack: 10},
+// {name: 'gobelin', attack: 1}
+// ]
 */
 const swap = curry((a, b, arr) => {
   const aIndex = arr.findIndex(equal(a))

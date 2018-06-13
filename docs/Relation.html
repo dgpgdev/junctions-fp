@@ -12,6 +12,7 @@
 	<link type="text/css" rel="stylesheet" href="styles/sunlight.{string}.css">
 
 	<link type="text/css" rel="stylesheet" href="styles/site.flatly.css">
+	<link type="text/css" rel="stylesheet" href="styles/prism.css">
 
 </head>
 
@@ -386,11 +387,11 @@
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = between(5, 10, 8) //return true
+    <pre><code class="language-javascript">const result = between(5, 10, 8) //return true
 const result = between(5, 10, 10) //return true
 const result = between(5, 10, 11) //return false
 const result = between(5, 10, 10, true) //return false
-const result = between(5, 10, 9, true) //return true</pre>
+const result = between(5, 10, 9, true) //return true</code></pre>
 
 
     
@@ -553,7 +554,7 @@ const result = between(5, 10, 9, true) //return true</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = noDefined(null) //return true</pre>
+    <pre><code class="language-javascript">const result = noDefined(null) //return true</code></pre>
 
 
     
@@ -740,12 +741,12 @@ const result = between(5, 10, 9, true) //return true</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const x = 42
+    <pre><code class="language-javascript">const x = 42
 const y = &#x27;Gandalf&#x27;
 const z = { name: &#x27;dragon&#x27;, attack: 10 }
 console.log(equal(x, 42)) // return true
 console.log(equal(y, &#x27;Gandalf&#x27;)) // return true
-console.log(equal(z, { name: &#x27;dragon&#x27;, attack: 10 })) // return true</pre>
+console.log(equal(z, { name: &#x27;dragon&#x27;, attack: 10 })) // return true</code></pre>
 
 
     
@@ -932,10 +933,10 @@ console.log(equal(z, { name: &#x27;dragon&#x27;, attack: 10 })) // return true</
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const limit = gt(10)
+    <pre><code class="language-javascript">const limit = gt(10)
 console.log((limit(11)) // return true
 console.log((limit(10)) // return false
-console.log((limit(9)) // return false</pre>
+console.log((limit(9)) // return false</code></pre>
 
 
     
@@ -1122,10 +1123,10 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const limit = gte(10)
+    <pre><code class="language-javascript">const limit = gte(10)
 console.log((limit(11)) // return true
 console.log((limit(10)) // return true
-console.log((limit(9)) // return false</pre>
+console.log((limit(9)) // return false</code></pre>
 
 
     
@@ -1312,7 +1313,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = is(&#x27;string&#x27;, &#x27;gandalf&#x27;) // return true</pre>
+    <pre><code class="language-javascript">const result = is(&#x27;string&#x27;, &#x27;gandalf&#x27;) // return true</code></pre>
 
 
     
@@ -1475,7 +1476,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = isInt(42) //return true</pre>
+    <pre><code class="language-javascript">const result = isInt(42) //return true</code></pre>
 
 
     
@@ -1638,7 +1639,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = isNumber(4.2) //return true</pre>
+    <pre><code class="language-javascript">const result = isNumber(4.2) //return true</code></pre>
 
 
     
@@ -1801,7 +1802,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = isString(&#x27;gandalf&#x27;) // return true</pre>
+    <pre><code class="language-javascript">const result = isString(&#x27;gandalf&#x27;) // return true</code></pre>
 
 
     
@@ -1964,7 +1965,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = isValidEmail(&#x27;gandalf@mordor.com&#x27;) //return true</pre>
+    <pre><code class="language-javascript">const result = isValidEmail(&#x27;gandalf@mordor.com&#x27;) //return true</code></pre>
 
 
     
@@ -2127,7 +2128,7 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const result = isValidUrl(&#x27;http://www.gandalf.com&#x27;) //return true</pre>
+    <pre><code class="language-javascript">const result = isValidUrl(&#x27;http://www.gandalf.com&#x27;) //return true</code></pre>
 
 
     
@@ -2314,10 +2315,10 @@ console.log((limit(9)) // return false</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const limit = lt(10)
+    <pre><code class="language-javascript">const limit = lt(10)
 console.log((limit(11)) // return false
 console.log((limit(10)) // return false
-console.log((limit(9)) // return true</pre>
+console.log((limit(9)) // return true</code></pre>
 
 
     
@@ -2504,10 +2505,10 @@ console.log((limit(9)) // return true</pre>
     
         <h5>Example</h5>
         
-    <pre class="sunlight-highlight-javascript">const limit = lte(10)
+    <pre><code class="language-javascript">const limit = lte(10)
 console.log((limit(11)) // return false
 console.log((limit(10)) // return true
-console.log((limit(9)) // return true</pre>
+console.log((limit(9)) // return true</code></pre>
 
 
     
@@ -2564,15 +2565,10 @@ console.log((limit(9)) // return true</pre>
 	Gauthier de Girodon Pralong
 	</span>
 
-<span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
-	
-		on {21tring}
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
-</span>
+
 </footer>
 
+<script src="scripts/prism.js"></script>
 <script src="scripts/docstrap.lib.js"></script>
 <script src="scripts/toc.js"></script>
 
@@ -2605,8 +2601,8 @@ $( function () {
 		if ( lang ) {
 
 			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
+			.addClass( "prism-" + lang )
+
 			.html( example.html() );
 
 		}
