@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+$accentColor = #589af2
+$textColor = #b5bdcb
+$borderColor = #222633
+$codeBgColor = #272c3b
+$arrowBgColor = #8bc34a
+
+:root
+  --bg #292d3e
+
+
+body
+  background: var(--bg)
+  font-family: 'Lato', sans-serif !important
+
+.sidebar
+  background var(--bg)!important
+
+.navbar
+  background var(--bg)!important
+h1
+  color #c292ea
+h2
+  color $accentColor
+h4
+  color  #f95723
+
+h2,h4
+  font-weight: 100
+
+
+table
+  border-color #000 !important
+  width 100%
+
+tr
+  border-top: 1px solid #000 !important
+
+tr:nth-child(2n)
+  background-color: $codeBgColor !important
+th
+  font-weight: 100
+
+th,td
+ border 1px solid $borderColor !important
+
+thead
+  background $borderColor
+  color #ff5722
+
+p
+  margin 0
+
+$contentWidth = 100%
+/*
+// layout
+$navbarHeight = 3.6rem
+$sidebarWidth = 20rem
+
+// responsive breakpoints
+$MQNarrow = 959px
+$MQMobile = 719px
+$MQMobileNarrow = 419px
+
+// code
+$lineNumbersWrapperWidth = 3.5rem*/
+
+
+.return
+  color #80deea
+
+.type
+  color #ff5722

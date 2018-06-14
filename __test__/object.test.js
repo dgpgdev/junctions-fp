@@ -16,6 +16,7 @@ describe('[ Object ]', function () {
   it('should test delProps', () => {
     const item = { name: 'Gandalf', age: 'unknow', type: 'magical', weapon: undefined }
     expect(delProps('type', item)).toEqual({ name: 'Gandalf', age: 'unknow', weapon: undefined })
+    expect(item).toEqual({ name: 'Gandalf', age: 'unknow', type: 'magical', weapon: undefined })
     expect(delProps(['type', 'age', 'weapon'], item)).toEqual({ name: 'Gandalf'})
     //expect(delProps(['name', 'age', 'weapon'], item)).toEqual(['Gandalf', 'unknow', undefined])
   })
