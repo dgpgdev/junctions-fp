@@ -14,5 +14,10 @@ import curry from './curry'
 console.log(getFirst(items))
 // return { name: 'dragon', attack: 10 }
  */
-const getFirst = curry((arr) => arr.slice(0, 1)[0])
+const getFirst = curry(function (...arr) {
+  if (arguments.length > 1) {
+    return Array.from(arguments).map(a => a[ 0 ])
+  }
+  return [ ...arr ][ 0 ][ 0 ]
+})
 export default getFirst

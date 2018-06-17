@@ -14,5 +14,11 @@ import curry from './curry'
 console.log(getLast(items))
 // return { name: 'gobelin', attack: 1 }
  */
-const getLast = curry((arr) => arr.slice(arr.length - 1)[0])
+const getLast = curry(function (...arr) {
+  if (arguments.length > 1) {
+    return Array.from(arguments).map(a => a[ a.length - 1 ])
+  }
+  const a = arr[ 0 ]
+  return a[ a.length - 1 ]
+})
 export default getLast

@@ -5,7 +5,8 @@ import curry from './curry'
 * @memberOf Junction
 */
 const modify = curry((property, value, item) => {
-  item[property] = value
-  return item
+  const clone = { ...item }
+  clone[ property ] = value
+  return clone
 })
 export default modify

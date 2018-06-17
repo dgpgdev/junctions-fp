@@ -39,12 +39,14 @@ export { default as between } from './between'
  * Object function
  * @namespace Object
  */
+export { default as delProps } from './delProps'
+export { default as extract } from './extract'
 export { default as has } from './has'
 export { default as getProps } from './getProps'
-export { default as delProps } from './delProps'
 export { default as modify } from './modify'
 export { default as merge } from './merge'
 export { default as mergeAll } from './mergeAll'
+
 /**
  * String function
  * @namespace String
