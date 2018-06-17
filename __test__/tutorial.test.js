@@ -1,24 +1,31 @@
 import {
   getStringExtension,
-  pipe,
+  add,
   any,
+  all,
+  pipe,
   contain,
   map,
   lte,
   getProps,
   filter,
   gte,
+  extract,
   size,
   getFirst,
   equal
 } from '../src/index'
+import { REGEXP_RESOURCE_PATH } from 'webpack/lib/ModuleFilenameHelpers'
 
 describe('[ TURORIAL ]', function () {
   it('should test getStringExtension', () => {
-    const authorizedExtension = ['.jpg', '.png']
-    const files = ['hello.jpg', 'mypic.jpg', 'vector.svg', 'logo.png', 'video.mp4']
-    const filesExtension = map(getStringExtension, files) // [ '.jpg', '.jpg', '.svg', '.png', '.mp4' ]
-    const validFiles = contain(authorizedExtension, filesExtension) // true
+    const authorizedExtension = [ '.jpg', '.png' ]
+    const files = [ 'hello.jpg', 'mypic.jpg', 'vector.svg', 'logo.png', 'video.mp4' ]
+    const validateFiles = array => item => any(pipe(getStringExtension, equal)(item), array)
+    expect(filter(validateFiles(authorizedExtension), files)).toEqual([ 'hello.jpg', 'mypic.jpg', 'logo.png' ])
+    // const filesExtension = map(getStringExtension, files) // [ '.jpg', '.jpg', '.svg', '.png', '.mp4' ]
+    // const validFiles = all(authorizedExtension, filesExtension) // true
+    // console.log('validate files', validFiles)
   })
 
   it('should test image size', () => {
@@ -34,5 +41,8 @@ describe('[ TURORIAL ]', function () {
     if (firstImageProtrait && equal(imagesNumber, 4)) {
       console.log('array size 4 and first image is a portait')
     }
+    expect(any(isPortrait, images)).toBe(true)
   })
+
+  // console.log(result)
 })

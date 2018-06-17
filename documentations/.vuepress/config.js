@@ -1,15 +1,16 @@
 module.exports = {
   title: 'Junctions-fp',
-  dest:'docs',
+  dest: 'docs',
   description: 'functionnal library',
   base: '/junctions-fp/',
   themeConfig: {
-    nav: [{
+    nav: [ {
       text: 'Tutorials',
       link: '/guide/',
-    }],
+    } ],
 
     sidebar: [
+      '/guide/',
       '/Functions',
       '/Math',
       '/Object',

@@ -8,6 +8,25 @@ $arrowBgColor = #8bc34a
 :root
   --bg #272d3c
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #212631;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #00bcd4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #73efff;
+}
 
 body
   background: var(--bg)
@@ -53,22 +72,18 @@ p
   margin 0
 
 $contentWidth = 100%
-/*
-// layout
-$navbarHeight = 3.6rem
-$sidebarWidth = 20rem
-
-// responsive breakpoints
-$MQNarrow = 959px
-$MQMobile = 719px
-$MQMobileNarrow = 419px
-
-// code
-$lineNumbersWrapperWidth = 3.5rem*/
-
 
 .return
   color #80deea
 
 .type
   color #ff5722
+
+.search-box
+  input
+    background-color #212631 !important
+  .suggestions
+    background-color #212631
+  .suggestion
+      &.focused
+        background-color #30374a
