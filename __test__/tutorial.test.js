@@ -15,7 +15,6 @@ import {
   getFirst,
   equal
 } from '../src/index'
-import { REGEXP_RESOURCE_PATH } from 'webpack/lib/ModuleFilenameHelpers'
 
 describe('[ TURORIAL ]', function () {
   it('should test getStringExtension', () => {

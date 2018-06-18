@@ -15,6 +15,7 @@ module.exports = {
       '/Math',
       '/Object',
       '/List',
+      '/Relations',
       '/String'
 
     ]
