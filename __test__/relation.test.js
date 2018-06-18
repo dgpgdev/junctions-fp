@@ -38,9 +38,7 @@ describe('[ Relation ]', function () {
   it('should test if value is an integer ', () => {
     const x = 42
     expect(isInt(x)).toBe(true)
-    expect(isInt({
-      name: 'Gandalf'
-    })).toBe(false)
+    expect(isInt(42.5)).toBe(false)
   })
   it('should test if value is a valid email ', () => {
     const x = 'gandalf@mordor.com'
@@ -60,11 +58,13 @@ describe('[ Relation ]', function () {
       name: 'dragon',
       attack: 10
     }
+    const omega = undefined
     expect(defined(x)).toBe(true)
     expect(defined(y)).toBe(true)
     expect(defined(z)).toBe(true)
     expect(defined(null)).toBe(false)
     expect(defined('')).toBe(false)
+    expect(defined(omega)).toBe(false)
   })
   it('should test if value is not defined', () => {
     const x = 42
