@@ -1,35 +1,35 @@
 {
-  "name": "junctions-fp",
-  "version": "1.0.23",
-  "description": "js functionnal programmin library",
-  "main": "lib/index.js",
-  "author": "Gauthier de Girodon Pralong",
-  "license": "MIT",
-  "scripts": {
-    "build": "babel src -d lib",
-    "test": "./node_modules/.bin/jest --coverage --watch",
-    "lint": "./node_modules/.bin/eslint src/ --fix",
-    "docs:dev": "vuepress dev documentations",
-    "docs:build": "vuepress build documentations"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-register": "^6.26.0",
-    "eslint": "^4.8.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "^21.4.2",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^21.2.1",
-    "jest-cli": "^21.2.1",
-    "vuepress": "^0.10.1"
-  }
+	"name": "junctions-fp",
+	"version": "1.0.24",
+	"description": "js functionnal programmin library",
+	"main": "lib/index.js",
+	"author": "Gauthier de Girodon Pralong",
+	"license": "MIT",
+	"scripts": {
+		"build": "babel src -d lib",
+		"test": "./node_modules/.bin/jest --coverage --watch",
+		"lint": "./node_modules/.bin/eslint src/ --fix",
+		"docs:dev": "vuepress dev documentations",
+		"docs:build": "vuepress build documentations"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-transform-es2015-destructuring": "^6.23.0",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-polyfill": "^6.26.0",
+		"babel-preset-env": "^1.6.0",
+		"babel-register": "^6.26.0",
+		"eslint": "^4.8.0",
+		"eslint-config-standard": "^10.2.1",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-jest": "^21.4.2",
+		"eslint-plugin-node": "^5.2.1",
+		"eslint-plugin-promise": "^3.6.0",
+		"eslint-plugin-standard": "^3.0.1",
+		"jest": "^21.2.1",
+		"jest-cli": "^21.2.1",
+		"vuepress": "^0.10.1"
+	}
 }
