@@ -408,6 +408,8 @@ describe('[ List ]', function () {
     it('should test chunk function', () => {
       const items = [1, 2, 3, 4, 5, 6]
       expect(chunk(items, 3)).toEqual([[1, 2, 3], [4, 5, 6]])
+      const c = chunk(items)
+      expect(c(3)).toEqual([[1, 2, 3], [4, 5, 6]])
     })
     it('should test swap function', () => {
       const items = [1, 2, 3, 4, 5, 6]
