@@ -4,8 +4,9 @@ docs
 tutorials
 __test__
 .babelrc
-.editorconfog
+.editorconfig
 .eslintignore
+.eslintrc.json
 conf.json
 coverage
 documentations
