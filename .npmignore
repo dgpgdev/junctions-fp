@@ -3,3 +3,9 @@ docs
 .vscode
 tutorials
 __test__
+.babelrc
+.editorconfog
+.eslintignore
+conf.json
+coverage
+documentations
