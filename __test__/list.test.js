@@ -22,6 +22,7 @@ import {
   transform2D,
   swap
 } from '../src/index'
+import swapIndex from '../src/swapIndex';
 
 describe('[ List ]', function () {
   describe('[ Size ]', () => {
@@ -340,6 +341,30 @@ describe('[ List ]', function () {
         name: 'dragon',
         attack: 10
       }, y)).toEqual([ {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'gobelin',
+        attack: 1
+      } ])
+    })
+    it('should test swapIndex function', () => {
+      const items = [ 1, 2, 3, 4, 5, 6 ]
+      const y = [ {
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      } ]
+      expect(swapIndex(2, 5, items)).toEqual([ 1, 2, 6, 4, 5, 3 ])
+      expect(swapIndex(0, 1, y)).toEqual([ {
         name: 'troll',
         attack: 5
       }, {
