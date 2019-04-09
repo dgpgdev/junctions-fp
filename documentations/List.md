@@ -262,13 +262,13 @@ swap({ name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }, items)
   { name: 'troll', attack: 5 }
   ]*/
 ```
-## transform2D
-<span class='return'>transform2D( size, array) ></span> Array
+## chunk
+<span class='return'>chunk(array, size) ></span> Array
 
-transform a one dimension array into 2D array
+transform a one dimension array into multiple array with size length
 ```js
 const items = [ 1, 2, 3, 4, 5, 6 ]
-transform2D(3, items)
+chunk(items, 3)
 /* return
   [
     [ 1, 2, 3 ],

@@ -82,5 +82,9 @@ export { default as flatFilter } from './flatFilter'
 export { default as all } from './all'
 export { default as any } from './any'
 export { default as swap } from './swap'
+<<<<<<< HEAD
 export { default as swapIndex } from './swapIndex'
 export { default as transform2D } from './transform2D'
+=======
+export { default as chunk } from './chunk'
+>>>>>>> 13a9bd5282c23e2b765e4432232d247d7df4a1d0
