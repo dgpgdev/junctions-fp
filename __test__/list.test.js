@@ -22,11 +22,7 @@ import {
   transform2D,
   swap
 } from '../src/index'
-<<<<<<< HEAD
-import swapIndex from '../src/swapIndex';
-=======
 import chunk from '../src/chunk'
->>>>>>> 13a9bd5282c23e2b765e4432232d247d7df4a1d0
 
 describe('[ List ]', function () {
   describe('[ Size ]', () => {
@@ -68,12 +64,29 @@ describe('[ List ]', function () {
       const x = [1, 2, 3, 4, 5]
       const y = [4, 5, 6, 7, 8]
       const z = [7, 8, 9, 10, 11]
-      const a = [{ name: 'dragon', attack: 10 }, { name: 'troll', attack: 5 }, { name: 'gobelin', attack: 1 }]
-      const b = [{ name: 'dragon', attack: 10 }, { name: 'kevin', attack: 3 }, { name: 'jedi', attack: 6 }]
+      const a = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'troll',
+        attack: 5
+      }, {
+        name: 'gobelin',
+        attack: 1
+      }]
+      const b = [{
+        name: 'dragon',
+        attack: 10
+      }, {
+        name: 'kevin',
+        attack: 3
+      }, {
+        name: 'jedi',
+        attack: 6
+      }]
 
       expect(excludeDuplicate(x, y, z)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-      expect(excludeDuplicate(a, b)).toEqual([
-        {
+      expect(excludeDuplicate(a, b)).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -104,8 +117,7 @@ describe('[ List ]', function () {
     })
     it('should test set item to first index', () => {
       const x = [1, 2, 3, 4, 5]
-      const y = [
-        {
+      const y = [{
           name: 'dragon',
           attack: 10
         },
@@ -123,15 +135,13 @@ describe('[ List ]', function () {
       expect(setFirst(5, x)).toEqual([5, 1, 2, 3, 4])
 
       expect(
-        setFirst(
-          {
+        setFirst({
             name: 'troll',
             attack: 5
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'troll',
           attack: 5
         },
@@ -145,15 +155,13 @@ describe('[ List ]', function () {
         }
       ])
       expect(
-        setFirst(
-          {
+        setFirst({
             name: 'dragon',
             attack: 10
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -167,15 +175,13 @@ describe('[ List ]', function () {
         }
       ])
       expect(
-        setFirst(
-          {
+        setFirst({
             name: 'gobelin',
             attack: 1
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'gobelin',
           attack: 1
         },
@@ -191,8 +197,7 @@ describe('[ List ]', function () {
     })
     it('should test set item to last index', () => {
       const x = [1, 2, 3, 4, 5]
-      const y = [
-        {
+      const y = [{
           name: 'dragon',
           attack: 10
         },
@@ -210,15 +215,13 @@ describe('[ List ]', function () {
       expect(setLast(1, x)).toEqual([2, 3, 4, 5, 1])
 
       expect(
-        setLast(
-          {
+        setLast({
             name: 'troll',
             attack: 5
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -232,15 +235,13 @@ describe('[ List ]', function () {
         }
       ])
       expect(
-        setLast(
-          {
+        setLast({
             name: 'gobelin',
             attack: 1
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -254,15 +255,13 @@ describe('[ List ]', function () {
         }
       ])
       expect(
-        setLast(
-          {
+        setLast({
             name: 'dragon',
             attack: 10
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'troll',
           attack: 5
         },
@@ -329,8 +328,7 @@ describe('[ List ]', function () {
       expect(flatMap(x, [y, z])).toEqual([45, 46, 47, 48, 49, 50])
     })
     it('should test pluck function', () => {
-      const items = [
-        {
+      const items = [{
           name: 'dragon',
           attack: 10
         },
@@ -346,8 +344,7 @@ describe('[ List ]', function () {
       expect(pluck('name', items)).toEqual(['dragon', 'troll', 'gobelin'])
     })
     it('should test removeItem function', () => {
-      const items = [
-        {
+      const items = [{
           name: 'dragon',
           attack: 10
         },
@@ -361,15 +358,13 @@ describe('[ List ]', function () {
         }
       ]
       expect(
-        removeItem(
-          {
+        removeItem({
             name: 'troll',
             attack: 5
           },
           items
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -380,8 +375,7 @@ describe('[ List ]', function () {
       ])
     })
     it('should test removeIndex function', () => {
-      const items = [
-        {
+      const items = [{
           name: 'dragon',
           attack: 10
         },
@@ -394,8 +388,7 @@ describe('[ List ]', function () {
           attack: 1
         }
       ]
-      expect(removeIndex(1, items)).toEqual([
-        {
+      expect(removeIndex(1, items)).toEqual([{
           name: 'dragon',
           attack: 10
         },
@@ -407,18 +400,26 @@ describe('[ List ]', function () {
     })
     it('should test transform2D function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      expect(transform2D(3, items)).toEqual([[1, 2, 3], [4, 5, 6]])
+      expect(transform2D(3, items)).toEqual([
+        [1, 2, 3],
+        [4, 5, 6]
+      ])
     })
     it('should test chunk function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      expect(chunk(items, 3)).toEqual([[1, 2, 3], [4, 5, 6]])
+      expect(chunk(items, 3)).toEqual([
+        [1, 2, 3],
+        [4, 5, 6]
+      ])
       const c = chunk(items)
-      expect(c(3)).toEqual([[1, 2, 3], [4, 5, 6]])
+      expect(c(3)).toEqual([
+        [1, 2, 3],
+        [4, 5, 6]
+      ])
     })
     it('should test swap function', () => {
       const items = [1, 2, 3, 4, 5, 6]
-      const y = [
-        {
+      const y = [{
           name: 'dragon',
           attack: 10
         },
@@ -433,19 +434,16 @@ describe('[ List ]', function () {
       ]
       expect(swap(3, 6, items)).toEqual([1, 2, 6, 4, 5, 3])
       expect(
-        swap(
-          {
+        swap({
             name: 'troll',
             attack: 5
-          },
-          {
+          }, {
             name: 'dragon',
             attack: 10
           },
           y
         )
-      ).toEqual([
-        {
+      ).toEqual([{
           name: 'troll',
           attack: 5
         },
@@ -460,8 +458,8 @@ describe('[ List ]', function () {
       ])
     })
     it('should test swapIndex function', () => {
-      const items = [ 1, 2, 3, 4, 5, 6 ]
-      const y = [ {
+      const items = [1, 2, 3, 4, 5, 6]
+      const y = [{
         name: 'dragon',
         attack: 10
       }, {
@@ -470,9 +468,9 @@ describe('[ List ]', function () {
       }, {
         name: 'gobelin',
         attack: 1
-      } ]
-      expect(swapIndex(2, 5, items)).toEqual([ 1, 2, 6, 4, 5, 3 ])
-      expect(swapIndex(0, 1, y)).toEqual([ {
+      }]
+      expect(swapIndex(2, 5, items)).toEqual([1, 2, 6, 4, 5, 3])
+      expect(swapIndex(0, 1, y)).toEqual([{
         name: 'troll',
         attack: 5
       }, {
@@ -481,7 +479,7 @@ describe('[ List ]', function () {
       }, {
         name: 'gobelin',
         attack: 1
-      } ])
+      }])
     })
   })
 })
