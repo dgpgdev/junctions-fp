@@ -398,13 +398,6 @@ describe('[ List ]', function () {
         }
       ])
     })
-    it('should test transform2D function', () => {
-      const items = [1, 2, 3, 4, 5, 6]
-      expect(transform2D(3, items)).toEqual([
-        [1, 2, 3],
-        [4, 5, 6]
-      ])
-    })
     it('should test chunk function', () => {
       const items = [1, 2, 3, 4, 5, 6]
       expect(chunk(items, 3)).toEqual([
@@ -456,30 +449,6 @@ describe('[ List ]', function () {
           attack: 1
         }
       ])
-    })
-    it('should test swapIndex function', () => {
-      const items = [1, 2, 3, 4, 5, 6]
-      const y = [{
-        name: 'dragon',
-        attack: 10
-      }, {
-        name: 'troll',
-        attack: 5
-      }, {
-        name: 'gobelin',
-        attack: 1
-      }]
-      expect(swapIndex(2, 5, items)).toEqual([1, 2, 6, 4, 5, 3])
-      expect(swapIndex(0, 1, y)).toEqual([{
-        name: 'troll',
-        attack: 5
-      }, {
-        name: 'dragon',
-        attack: 10
-      }, {
-        name: 'gobelin',
-        attack: 1
-      }])
     })
   })
 })
