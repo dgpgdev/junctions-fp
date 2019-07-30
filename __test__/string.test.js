@@ -1,20 +1,13 @@
-import {
-  getStringExtension,
-  containDigit,
-  escapeRegExp,
-  trim,
-  pipe,
-  equal,
-  isValidEmail,
-  isValidUrl
-} from '../src/index'
-import { findLocalNegativePatterns } from 'fast-glob/out/managers/tasks'
+import { getStringExtension, containDigit, escapeRegExp, trim, pipe, equal, isValidEmail, isValidUrl, addSlashes, stripSlashes } from '../src/index'
 
-describe('[ Object ]', function () {
+describe('[ String ]', function() {
   it('should test getStringExtension', () => {
     const ext = 'picture.jpg'
     const ext2 = 'picture.gif'
-    const isAgif = pipe(getStringExtension, equal('.gif'))
+    const isAgif = pipe(
+      getStringExtension,
+      equal('.gif')
+    )
     expect(getStringExtension(ext)).toBe('.jpg')
     expect(isAgif(ext)).toBe(false)
     expect(isAgif(ext2)).toBe(true)
@@ -45,5 +38,15 @@ describe('[ Object ]', function () {
     const ext = ' lala lala '
     // eslint-disable-next-line no-useless-escape
     expect(trim(ext)).toBe('lala lala')
+  })
+  it('should test addSlashes', () => {
+    const ext = "hey l'abricot"
+    // eslint-disable-next-line no-useless-escape
+    expect(addSlashes(ext)).toBe("hey l\\'abricot")
+  })
+  it('should test stripSlashes', () => {
+    const ext = "hey l\\'abricot"
+    // eslint-disable-next-line no-useless-escape
+    expect(stripSlashes(ext)).toBe("hey l'abricot")
   })
 })
